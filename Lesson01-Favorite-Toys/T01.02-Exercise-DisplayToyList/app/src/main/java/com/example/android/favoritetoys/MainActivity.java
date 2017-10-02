@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView mToysListTextView;
+    private TextView mToysListTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
