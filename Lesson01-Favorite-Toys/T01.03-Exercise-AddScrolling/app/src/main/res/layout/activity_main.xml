@@ -19,10 +19,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--TODO (2) Make the width of the ScrollView match_parent and the height wrap_content-->
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     </ScrollView>
 
     <TextView
