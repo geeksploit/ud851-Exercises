@@ -34,12 +34,13 @@
         android:id="@+id/et_search_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/query_hint"
         android:textSize="22sp" />
 
     <!--DONE (8) Give the EditText an id of @+id/et_search_box-->
     <!--DONE (9) Set the text size to 22sp-->
     <!--DONE (10) Set the width to match_parent and the height to wrap_content-->
-    <!--TODO (11) Provide a hint telling the user to enter a query and then click search-->
+    <!--DONE (11) Provide a hint telling the user to enter a query and then click search-->
 
     <!--TODO (12) Add a TextView-->
     <!--TODO (13) Give the TextView an id of @+id/tv_url_display-->
