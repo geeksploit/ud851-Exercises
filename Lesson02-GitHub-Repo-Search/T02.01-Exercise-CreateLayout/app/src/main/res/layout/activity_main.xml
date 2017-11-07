@@ -57,8 +57,14 @@
     <!--DONE (16) Give the TextView a top margin of 8dp-->
     <!--DONE (17) Set the text to tell the user their search URL will show up here when they click search-->
 
-    <!--TODO (18) Add a ScrollView-->
-    <!--TODO (19) Set the width to match_parent and the height to wrap_content-->
+    <!--DONE (18) Add a ScrollView-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+    <!--DONE (19) Set the width to match_parent and the height to wrap_content-->
     <!--TODO (20) Set the top margin to 16dp-->
 
     <!--TODO (21) Within the ScrollView, add a TextView-->
