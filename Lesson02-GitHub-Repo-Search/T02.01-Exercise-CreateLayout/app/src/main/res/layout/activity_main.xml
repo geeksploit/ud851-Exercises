@@ -67,6 +67,7 @@
             android:id="@+id/tv_github_search_results_json"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/search_hint"
             android:textSize="18sp" />
     </ScrollView>
 
@@ -77,6 +78,6 @@
     <!--DONE (22) Give the TextView an id of @+id/tv_github_search_results_json-->
     <!--DONE (23) Set the text size to 18sp-->
     <!--DONE (24) Set the height and width to wrap_content-->
-    <!--TODO (25) Set the text to something that tells the user to make a search-->
+    <!--DONE (25) Set the text to something that tells the user to make a search-->
 
 </LinearLayout>
