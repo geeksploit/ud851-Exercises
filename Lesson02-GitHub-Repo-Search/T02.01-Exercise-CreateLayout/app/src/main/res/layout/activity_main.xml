@@ -66,7 +66,8 @@
         <TextView
             android:id="@+id/tv_github_search_results_json"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
     </ScrollView>
 
     <!--DONE (19) Set the width to match_parent and the height to wrap_content-->
@@ -74,7 +75,7 @@
 
     <!--DONE (21) Within the ScrollView, add a TextView-->
     <!--DONE (22) Give the TextView an id of @+id/tv_github_search_results_json-->
-    <!--TODO (23) Set the text size to 18sp-->
+    <!--DONE (23) Set the text size to 18sp-->
     <!--DONE (24) Set the height and width to wrap_content-->
     <!--TODO (25) Set the text to something that tells the user to make a search-->
 
