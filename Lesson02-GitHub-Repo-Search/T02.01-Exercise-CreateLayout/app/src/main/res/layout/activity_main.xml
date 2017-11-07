@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2016 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,16 +16,18 @@
 
 <!--DONE (1) Change the ConstraintLayout to a LinearLayout-->
 <!--DONE (2) Make the orientation vertical-->
-<!--TODO (3) Give left, right, and top padding of 16dp-->
+<!--DONE (3) Give left, right, and top padding of 16dp-->
 <!--TODO (4) Remove the line that declares the id, we don't need it-->
 <!--TODO (5) Remove the xmlns:app declaration, we don't need that anymore-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
 
     <!--TODO (6) Delete this TextView-->
     <TextView
@@ -55,10 +56,10 @@
     <!--TODO (19) Set the width to match_parent and the height to wrap_content-->
     <!--TODO (20) Set the top margin to 16dp-->
 
-        <!--TODO (21) Within the ScrollView, add a TextView-->
-        <!--TODO (22) Give the TextView an id of @+id/tv_github_search_results_json-->
-        <!--TODO (23) Set the text size to 18sp-->
-        <!--TODO (24) Set the height and width to wrap_content-->
-        <!--TODO (25) Set the text to something that tells the user to make a search-->
+    <!--TODO (21) Within the ScrollView, add a TextView-->
+    <!--TODO (22) Give the TextView an id of @+id/tv_github_search_results_json-->
+    <!--TODO (23) Set the text size to 18sp-->
+    <!--TODO (24) Set the height and width to wrap_content-->
+    <!--TODO (25) Set the text to something that tells the user to make a search-->
 
 </LinearLayout>
