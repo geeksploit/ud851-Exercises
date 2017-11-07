@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         // DONE (30) Use findViewById to get a reference to mUrlDisplayTextView
         mUrlDisplayTextView = (TextView) findViewById(R.id.tv_url_display);
-        // TODO (31) Use findViewById to get a reference to mSearchResultsTextView
+        // DONE (31) Use findViewById to get a reference to mSearchResultsTextView
+        mSearchResultsTextView = (TextView) findViewById(R.id.tv_github_search_results_json);
     }
 }
