@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,11 +65,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        if (id == R.id.action_search) {
+            Toast.makeText(this, "Search clicked", Toast.LENGTH_LONG).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
     // DONE (11) Override onOptionsItemSelected
     // DONE (12) Within onOptionsItemSelected, get the ID of the item that was selected
-    // TODO (13) If the item's ID is R.id.action_search, show a Toast and return true to tell Android that you've handled this menu click
-    // TODO (14) Don't forgot to call .show() on your Toast
-    // TODO (15) If you do NOT handle the menu click, return super.onOptionsItemSelected to let Android handle the menu click
+    // DONE (13) If the item's ID is R.id.action_search, show a Toast and return true to tell Android that you've handled this menu click
+    // DONE (14) Don't forgot to call .show() on your Toast
+    // DONE (15) If you do NOT handle the menu click, return super.onOptionsItemSelected to let Android handle the menu click
 }
