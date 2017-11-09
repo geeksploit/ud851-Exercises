@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
             // DONE (4) Remove the Toast message when the search menu item is clicked
             Context context = MainActivity.this;
             String textToShow = "Search clicked";
-            // TODO (5) Call makeGithubSearchQuery when the search menu item is clicked
+            // DONE (5) Call makeGithubSearchQuery when the search menu item is clicked
+            makeGithubSearchQuery();
             return true;
         }
         return super.onOptionsItemSelected(item);
