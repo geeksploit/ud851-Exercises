@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     // DONE (2) Create a menu xml called 'main.xml' in the res->menu folder
     // DONE (3) Add one menu item to your menu
     // DONE (4) Give the menu item an id of @+id/action_search
-    // TODO (5) Set the orderInCategory to 1
+    // DONE (5) Set the orderInCategory to 1
     // TODO (6) Show this item if there is room (use app:showAsAction, not android:showAsAction)
     // TODO (7) Set the title to the search string ("Search") from strings.xml
     // Do 2 - 7 in menu.xml ///////////////////////////////////////////////////////////////////////
