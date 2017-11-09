@@ -52,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
     // DONE (8) Override onCreateOptionsMenu
-    // TODO (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu
+    // DONE (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu
     // TODO (10) Return true to display your menu
 
     // TODO (11) Override onOptionsItemSelected
