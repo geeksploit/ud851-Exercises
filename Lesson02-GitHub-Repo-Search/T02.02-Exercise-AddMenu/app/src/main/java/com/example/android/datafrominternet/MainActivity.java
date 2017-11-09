@@ -17,6 +17,7 @@ package com.example.android.datafrominternet;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -49,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
     // Do 2 - 7 in menu.xml ///////////////////////////////////////////////////////////////////////
 
 
-    // TODO (8) Override onCreateOptionsMenu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+    // DONE (8) Override onCreateOptionsMenu
     // TODO (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu
     // TODO (10) Return true to display your menu
 
