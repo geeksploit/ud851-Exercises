@@ -18,6 +18,7 @@ package com.example.android.datafrominternet;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -59,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
     // DONE (9) Within onCreateOptionsMenu, use getMenuInflater().inflate to inflate the menu
     // DONE (10) Return true to display your menu
 
-    // TODO (11) Override onOptionsItemSelected
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+    // DONE (11) Override onOptionsItemSelected
     // TODO (12) Within onOptionsItemSelected, get the ID of the item that was selected
     // TODO (13) If the item's ID is R.id.action_search, show a Toast and return true to tell Android that you've handled this menu click
     // TODO (14) Don't forgot to call .show() on your Toast
