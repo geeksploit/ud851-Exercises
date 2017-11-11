@@ -68,12 +68,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // DONE (1) Create a class called GithubQueryTask that extends AsyncTask<URL, Void, String>
-    // TODO (2) Override the doInBackground method to perform the query. Return the results. (Hint: You've already written the code to perform the query)
+    // DONE (2) Override the doInBackground method to perform the query. Return the results. (Hint: You've already written the code to perform the query)
     // TODO (3) Override onPostExecute to display the results in the TextView
     class GithubQueryTask extends AsyncTask<URL, Void, String> {
         @Override
         protected String doInBackground(URL... urls) {
-            return null;
+            String response = null;
+            try {
+                response = NetworkUtils.getResponseFromHttpUrl(urls[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return response;
         }
     }
 
