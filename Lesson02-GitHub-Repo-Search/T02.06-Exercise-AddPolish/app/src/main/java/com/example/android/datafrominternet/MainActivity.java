@@ -77,7 +77,11 @@ public class MainActivity extends AppCompatActivity {
         mSearchResultsTextView.setVisibility(View.VISIBLE);
     }
 
-    // TODO (15) Create a method called showErrorMessage to show the error and hide the data
+    // COMPLETED (15) Create a method called showErrorMessage to show the error and hide the data
+    private void showErrorMessage() {
+        mSearchResultsTextView.setVisibility(View.INVISIBLE);
+        mErrorMessageTextView.setVisibility(View.VISIBLE);
+    }
 
     public class GithubQueryTask extends AsyncTask<URL, Void, String> {
 
