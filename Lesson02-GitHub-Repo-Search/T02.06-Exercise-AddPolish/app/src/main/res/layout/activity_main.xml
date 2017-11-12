@@ -77,11 +77,12 @@
     <!--COMPLETED (19) Give the ProgressBar an id of @+id/pb_loading_indicator-->
     <!--COMPLETED (20) Set the layout_height and layout_width to 42dp-->
     <!--COMPLETED (21) Set the layout_gravity to center-->
-    <!--TODO (22) Set the visibility of the ProgressBar to invisible-->
+    <!--COMPLETED (22) Set the visibility of the ProgressBar to invisible-->
     <!--TODO (23) Make this ProgressBar a child of the FrameLayout the you added above-->
     <ProgressBar
         android:id="@+id/pb_loading_indicator"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:visibility="invisible" />
 </LinearLayout>
