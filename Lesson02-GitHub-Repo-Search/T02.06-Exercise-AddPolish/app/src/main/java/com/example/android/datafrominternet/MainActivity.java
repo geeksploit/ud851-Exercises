@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (13) Get a reference to the error TextView using findViewById
         mErrorMessageTextView = (TextView) findViewById(R.id.tv_error_message_display);
 
-        // TODO (25) Get a reference to the ProgressBar using findViewById
+        // COMPLETED (25) Get a reference to the ProgressBar using findViewById
+        mSearchProgressBar = (ProgressBar) findViewById(R.id.pb_loading_indicator);
     }
 
     /**
