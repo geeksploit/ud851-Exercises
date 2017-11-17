@@ -49,7 +49,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     // COMPLETED (8) Align the TextView to the start of the parent
     // COMPLETED (9) Center the TextView vertically in the layout
     // COMPLETED (10) Set the font family to monospace
-    // TODO (11) Set the text size to 42sp
+    // COMPLETED (11) Set the text size to 42sp
 
     private static final String TAG = GreenAdapter.class.getSimpleName();
 
