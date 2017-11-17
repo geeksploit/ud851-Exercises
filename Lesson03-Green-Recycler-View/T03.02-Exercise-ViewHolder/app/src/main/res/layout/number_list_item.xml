@@ -4,5 +4,5 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <TextView />
+    <TextView android:id="@+id/tv_item_number" />
 </FrameLayout>

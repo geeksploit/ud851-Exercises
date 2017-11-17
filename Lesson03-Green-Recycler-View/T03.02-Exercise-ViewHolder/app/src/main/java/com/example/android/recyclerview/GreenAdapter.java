@@ -44,7 +44,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     // COMPLETED (3) Make the width match_parent and the height wrap_content
     // COMPLETED (4) Set the padding to 16dp
     // COMPLETED (5) Add a TextView as the only child of the FrameLayout
-    // TODO (6) Give the TextView an ID "@+id/tv_item_number"
+    // COMPLETED (6) Give the TextView an ID "@+id/tv_item_number"
     // TODO (7) Set the height and width to wrap_content
     // TODO (8) Align the TextView to the start of the parent
     // TODO (9) Center the TextView vertically in the layout
