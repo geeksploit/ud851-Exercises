@@ -116,7 +116,9 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         return mNumberItems;
     }
 
-    // TODO (12) Create a class called NumberViewHolder that extends RecyclerView.ViewHolder
+    // COMPLETED (12) Create a class called NumberViewHolder that extends RecyclerView.ViewHolder
+    class NumberViewHolder extends RecyclerView.ViewHolder {
+    }
 
     // TODO (13) Within NumberViewHolder, create a TextView variable called listItemNumberView
 
