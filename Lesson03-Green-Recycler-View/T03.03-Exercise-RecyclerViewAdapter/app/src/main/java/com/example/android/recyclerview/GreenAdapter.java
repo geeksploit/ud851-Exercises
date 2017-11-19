@@ -44,8 +44,13 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         mNumberItems = numberItems;
     }
 
-    // TODO (5) Override the onCreateViewHolder method
+    // COMPLETED (5) Override the onCreateViewHolder method
     // TODO (6) Create and return a new NumberViewHolder within this method
+    @Override
+    public NumberViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return null;
+    }
+
 
     // TODO (7) Override onBindViewHolder
     // TODO (8) Within onBindViewHolder, call holder.bind and pass in the position
