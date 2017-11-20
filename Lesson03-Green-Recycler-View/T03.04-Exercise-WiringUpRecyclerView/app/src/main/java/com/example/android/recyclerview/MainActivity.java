@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (7) Use setHasFixedSize(true) to designate that the contents of the RecyclerView won't change an item's size
         mNumbersList.setHasFixedSize(true);
 
-        // TODO (8) Store a new GreenAdapter in mAdapter and pass it NUM_LIST_ITEMS
+        // COMPLETED (8) Store a new GreenAdapter in mAdapter and pass it NUM_LIST_ITEMS
+        mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
 
         // TODO (9) Set the GreenAdapter you created on mNumbersList
     }
