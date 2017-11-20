@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (8) Store a new GreenAdapter in mAdapter and pass it NUM_LIST_ITEMS
         mAdapter = new GreenAdapter(NUM_LIST_ITEMS);
 
-        // TODO (9) Set the GreenAdapter you created on mNumbersList
+        // COMPLETED (9) Set the GreenAdapter you created on mNumbersList
+        mNumbersList.setAdapter(mAdapter);
     }
 }
