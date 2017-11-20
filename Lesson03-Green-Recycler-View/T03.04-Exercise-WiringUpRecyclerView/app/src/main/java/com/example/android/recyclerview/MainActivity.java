@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (2) Create a GreenAdapter variable called mAdapter
     private GreenAdapter mAdapter;
     // COMPLETED (3) Create a RecyclerView variable called mNumbersList
-    private RecyclerView mNumberList;
+    private RecyclerView mNumbersList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // COMPLETED (4) Use findViewById to store a reference to the RecyclerView in mNumbersList
-        mNumberList = (RecyclerView) findViewById(R.id.rv_numbers);
+        mNumbersList = (RecyclerView) findViewById(R.id.rv_numbers);
 
         // COMPLETED (5) Create a LinearLayoutManager variable called layoutManager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         // COMPLETED (6) Use setLayoutManager on mNumbersList with the LinearLayoutManager we created above
-        mNumberList.setLayoutManager(layoutManager);
+        mNumbersList.setLayoutManager(layoutManager);
 
         // TODO (7) Use setHasFixedSize(true) to designate that the contents of the RecyclerView won't change an item's size
 
