@@ -17,6 +17,7 @@ package com.example.android.recyclerview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     // COMPLETED (2) Create a GreenAdapter variable called mAdapter
     private GreenAdapter mAdapter;
-    // TODO (3) Create a RecyclerView variable called mNumbersList
+    // COMPLETED (3) Create a RecyclerView variable called mNumbersList
+    private RecyclerView mNumberList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
