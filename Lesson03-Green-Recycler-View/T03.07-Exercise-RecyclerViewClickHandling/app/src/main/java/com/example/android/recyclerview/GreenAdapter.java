@@ -90,7 +90,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
     // COMPLETED (1) Add an interface called ListItemClickListener
     // COMPLETED (2) Within that interface, define a void method called onListItemClick that takes an int as a parameter
-    private interface ListItemClickListener {
+    interface ListItemClickListener {
         void onListItemClick(int itemNumber);
     }
 
