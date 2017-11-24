@@ -35,12 +35,13 @@
         <!-- COMPLETED (8) Specify ChildActivity's parent using android:parentActivityName -->
         <!-- COMPLETED (9) Create a meta-data tag for this Activity -->
         <!-- COMPLETED (10) Specify the name of the meta-data as android.support.PARENT_ACTIVITY -->
-        <!-- TODO (11) Specify the value of the meta data as .MainActivity -->
+        <!-- COMPLETED (11) Specify the value of the meta data as .MainActivity -->
         <activity
             android:name=".ChildActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
     </application>
 
