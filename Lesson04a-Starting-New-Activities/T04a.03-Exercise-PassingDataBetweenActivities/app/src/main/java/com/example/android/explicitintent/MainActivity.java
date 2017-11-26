@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                  */
                 Intent startChildActivityIntent = new Intent(context, destinationActivity);
 
-                // TODO (2) Use the putExtra method to put the String from the EditText in the Intent
+                // COMPLETED (2) Use the putExtra method to put the String from the EditText in the Intent
+                startChildActivityIntent.putExtra(Intent.EXTRA_TEXT, stringToPassToAnotherActivity);
 
                 /*
                  * Once the Intent has been created, we can use Activity's method, "startActivity"
