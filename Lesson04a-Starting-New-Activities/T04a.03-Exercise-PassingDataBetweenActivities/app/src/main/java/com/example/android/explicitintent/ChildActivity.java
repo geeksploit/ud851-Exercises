@@ -41,7 +41,8 @@ public class ChildActivity extends AppCompatActivity {
             // COMPLETED (5) If the Intent contains the correct extra, retrieve the text
             String incomingText = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT);
 
-            // TODO (6) If the Intent contains the correct extra, use it to set the TextView text
+            // COMPLETED (6) If the Intent contains the correct extra, use it to set the TextView text
+            mDisplayText.setText(incomingText);
         }
     }
 }
