@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 .query(address);
         Uri addressUri = builder.build();
 
-        // TODO (7) Replace the Toast with a call to showMap, passing in the Uri from the previous step
-        Toast.makeText(this, "TODO: Open a map when this button is clicked", Toast.LENGTH_SHORT).show();
+        // COMPLETED (7) Replace the Toast with a call to showMap, passing in the Uri from the previous step
+        showMap(addressUri);
     }
 
     /**
