@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (5) Specify a String you'd like to share
         String message = "Once upon a time...";
 
-        // TODO (6) Replace the Toast with shareText, passing in the String from step 5
-        Toast.makeText(this, "TODO: Share text when this is clicked", Toast.LENGTH_LONG).show();
+        // COMPLETED (6) Replace the Toast with shareText, passing in the String from step 5
+        shareText(message);
     }
 
     /**
