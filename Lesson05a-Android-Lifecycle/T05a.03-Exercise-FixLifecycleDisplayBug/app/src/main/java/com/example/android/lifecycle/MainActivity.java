@@ -163,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        // TODO (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
-
+        // COMPLETED (3) Add the ON_DESTROY String to the front of mLifecycleCallbacks
+        mLifecycleCallbacks.add(ON_DESTROY);
         logAndAppend(ON_DESTROY);
     }
 
