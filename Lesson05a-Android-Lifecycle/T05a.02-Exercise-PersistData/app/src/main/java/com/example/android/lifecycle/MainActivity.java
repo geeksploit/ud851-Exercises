@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    // TODO (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
+    // COMPLETED (1) Create a key String called LIFECYCLE_CALLBACKS_TEXT_KEY
+    private final String LIFECYCLE_CALLBACKS_TEXT_KEY = "callback";
 
     /* Constant values for the names of each respective lifecycle callback */
     private static final String ON_CREATE = "onCreate";
