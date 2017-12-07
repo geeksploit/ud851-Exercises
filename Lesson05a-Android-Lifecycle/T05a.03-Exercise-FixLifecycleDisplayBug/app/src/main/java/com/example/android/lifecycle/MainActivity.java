@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = mLifecycleCallbacks.size() - 1; i >= 0; i--) {
             mLifecycleDisplay.append(mLifecycleCallbacks.get(i));
         }
-        // TODO (5) Clear mLifecycleCallbacks after iterating through it
+        // COMPLETED (5) Clear mLifecycleCallbacks after iterating through it
+        mLifecycleCallbacks.clear();
 
         logAndAppend(ON_CREATE);
     }
