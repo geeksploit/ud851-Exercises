@@ -86,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_RESTART);
     }
 
-    // TODO (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
+    // COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        logAndAppend(ON_DESTROY);
+    }
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can
