@@ -72,7 +72,12 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_PAUSE);
     }
 
-    // TODO (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+    // COMPLETED (5) Override onStop, call super.onStop, and call logAndAppend with ON_STOP
+    @Override
+    protected void onStop() {
+        super.onStop();
+        logAndAppend(ON_STOP);
+    }
 
     // TODO (6) Override onRestart, call super.onRestart, and call logAndAppend with ON_RESTART
 
