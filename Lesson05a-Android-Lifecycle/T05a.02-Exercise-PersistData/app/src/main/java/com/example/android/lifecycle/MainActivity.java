@@ -138,11 +138,14 @@ public class MainActivity extends AppCompatActivity {
         logAndAppend(ON_DESTROY);
     }
 
-    // TODO (2) Override onSaveInstanceState
+    // COMPLETED (2) Override onSaveInstanceState
     // Do steps 3 - 5 within onSaveInstanceState
     // TODO (3) Call super.onSaveInstanceState
     // TODO (4) Call logAndAppend with the ON_SAVE_INSTANCE_STATE String
     // TODO (5) Put the text from the TextView in the outState bundle
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+    }
 
     /**
      * Logs to the console and appends the lifecycle method name to the TextView so that you can
