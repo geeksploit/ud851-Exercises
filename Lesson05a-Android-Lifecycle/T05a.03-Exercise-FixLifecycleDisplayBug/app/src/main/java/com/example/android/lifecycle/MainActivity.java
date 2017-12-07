@@ -74,8 +74,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // TODO (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
-
+        // COMPLETED (4) Iterate backwards through mLifecycleCallbacks, appending each String and a newline to mLifecycleDisplay
+        for (int i = mLifecycleCallbacks.size() - 1; i >= 0; i--) {
+            mLifecycleDisplay.append(mLifecycleCallbacks.get(i));
+        }
         // TODO (5) Clear mLifecycleCallbacks after iterating through it
 
         logAndAppend(ON_CREATE);
