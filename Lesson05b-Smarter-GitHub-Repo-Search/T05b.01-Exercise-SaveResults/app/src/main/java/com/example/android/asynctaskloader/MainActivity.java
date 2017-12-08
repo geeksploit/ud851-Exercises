@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // TODO (3) Override onSaveInstanceState to persist data across Activity recreation
+    // COMPLETED (3) Override onSaveInstanceState to persist data across Activity recreation
     // Do the following steps within onSaveInstanceState
     // TODO (4) Make sure super.onSaveInstanceState is called before doing anything else
 
@@ -162,4 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO (7) Put the contents of the TextView that contains our raw JSON search results into a variable
     // TODO (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+    }
 }
