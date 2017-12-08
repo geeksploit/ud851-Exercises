@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (4) Make sure super.onSaveInstanceState is called before doing anything else
 
     // COMPLETED (5) Put the contents of the TextView that contains our URL into a variable
-    // TODO (6) Using the key for the query URL, put the string in the outState Bundle
+    // COMPLETED (6) Using the key for the query URL, put the string in the outState Bundle
 
     // TODO (7) Put the contents of the TextView that contains our raw JSON search results into a variable
     // TODO (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
@@ -166,5 +166,6 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         String queryUrl = mUrlDisplayTextView.getText().toString();
+        outState.putString(KEY_QUERY_URL, queryUrl);
     }
 }
