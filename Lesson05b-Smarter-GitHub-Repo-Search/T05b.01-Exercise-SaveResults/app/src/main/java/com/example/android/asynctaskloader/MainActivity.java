@@ -61,7 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);
 
-        // TODO (9) If the savedInstanceState bundle is not null, set the text of the URL and search results TextView respectively
+        // COMPLETED (9) If the savedInstanceState bundle is not null, set the text of the URL and search results TextView respectively
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey(KEY_QUERY_URL)) {
+                String queryUrl = savedInstanceState.getString(KEY_QUERY_URL);
+                mUrlDisplayTextView.setText(queryUrl);
+            }
+            if (savedInstanceState.containsKey(KEY_RAW_JSON)) {
+                String rawJson = savedInstanceState.getString(KEY_RAW_JSON);
+                mSearchResultsTextView.setText(rawJson);
+            }
+        }
     }
 
     /**
