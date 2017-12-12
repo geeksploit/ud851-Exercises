@@ -153,8 +153,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 forceLoad();
             }
 
-            // TODO (9) Override loadInBackground
-
+            // COMPLETED (9) Override loadInBackground
+            @Override
+            public String loadInBackground() {
                 // Within loadInBackground
                 // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
 
@@ -162,6 +163,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
                 // END - loadInBackground
+                return null;
+            }
         };
     }
 
