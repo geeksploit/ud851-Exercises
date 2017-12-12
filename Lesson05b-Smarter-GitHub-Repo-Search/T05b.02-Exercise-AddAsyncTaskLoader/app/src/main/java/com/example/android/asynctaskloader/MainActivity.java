@@ -18,6 +18,7 @@ package com.example.android.asynctaskloader;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -133,8 +134,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    // TODO (3) Override onCreateLoader
-    // Within onCreateLoader
+    // COMPLETED (3) Override onCreateLoader
+    public Loader<String> onCreateLoader(int id, Bundle args) {
         // TODO (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
             // TODO (5) Override onStartLoading
                 // Within onStartLoading
@@ -155,6 +156,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
                 // END - loadInBackground
+        return null;
+    }
 
     // TODO (13) Override onLoadFinished
 
