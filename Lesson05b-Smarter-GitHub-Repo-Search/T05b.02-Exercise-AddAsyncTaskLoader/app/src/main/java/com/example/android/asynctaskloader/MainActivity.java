@@ -157,7 +157,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public String loadInBackground() {
                 // Within loadInBackground
-                // TODO (10) Get the String for our URL from the bundle passed to onCreateLoader
+                // COMPLETED (10) Get the String for our URL from the bundle passed to onCreateLoader
+                String searchQueryUrlString = args.getString(SEARCH_QUERY_URL_EXTRA);
 
                 // TODO (11) If the URL is null or empty, return null
 
