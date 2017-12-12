@@ -73,8 +73,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (savedInstanceState != null) {
             String queryUrl = savedInstanceState.getString(SEARCH_QUERY_URL_EXTRA);
 
-            // TODO (26) Remove the code that retrieves the JSON
-            String rawJsonSearchResults = savedInstanceState.getString(SEARCH_RESULTS_RAW_JSON);
+            // COMPLETED (26) Remove the code that retrieves the JSON
 
             mUrlDisplayTextView.setText(queryUrl);
             // COMPLETED (25) Remove the code that displays the JSON
