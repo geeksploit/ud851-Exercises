@@ -179,7 +179,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoadFinished(Loader<String> loader, String data) {
         // Within onLoadFinished
-        // TODO (14) Hide the loading indicator
+        // COMPLETED (14) Hide the loading indicator
+        mLoadingIndicator.setVisibility(View.GONE);
 
         // TODO (15) Use the same logic used in onPostExecute to show the data or the error message
         // END - onLoadFinished
