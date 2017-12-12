@@ -204,39 +204,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<String> loader) {
     }
 
-    // TODO (29) Delete the AsyncTask class
-    @SuppressLint("StaticFieldLeak")
-    public class GithubQueryTask extends AsyncTask<URL, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            mLoadingIndicator.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        protected String doInBackground(URL... params) {
-            URL searchUrl = params[0];
-            String githubSearchResults = null;
-            try {
-                githubSearchResults = NetworkUtils.getResponseFromHttpUrl(searchUrl);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return githubSearchResults;
-        }
-
-        @Override
-        protected void onPostExecute(String githubSearchResults) {
-            mLoadingIndicator.setVisibility(View.INVISIBLE);
-            if (githubSearchResults != null && !githubSearchResults.equals("")) {
-                showJsonDataView();
-                mSearchResultsTextView.setText(githubSearchResults);
-            } else {
-                showErrorMessage();
-            }
-        }
-    }
+    // COMPLETED (29) Delete the AsyncTask class
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
