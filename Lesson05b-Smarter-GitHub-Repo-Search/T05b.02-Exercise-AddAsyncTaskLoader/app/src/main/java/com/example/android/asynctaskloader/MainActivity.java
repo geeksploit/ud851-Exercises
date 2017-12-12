@@ -169,9 +169,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     return NetworkUtils.getResponseFromHttpUrl(searchUrl);
                 } catch (IOException e) {
                     e.printStackTrace();
+                    return null;
                 }
                 // END - loadInBackground
-                return null;
             }
         };
     }
