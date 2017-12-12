@@ -156,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             // COMPLETED (9) Override loadInBackground
             @Override
             public String loadInBackground() {
-                // Within loadInBackground
                 // COMPLETED (10) Get the String for our URL from the bundle passed to onCreateLoader
                 String searchQueryUrlString = args.getString(SEARCH_QUERY_URL_EXTRA);
 
@@ -171,7 +170,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     e.printStackTrace();
                     return null;
                 }
-                // END - loadInBackground
             }
         };
     }
