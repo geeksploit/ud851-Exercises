@@ -101,8 +101,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
 
-        // TODO (18) Remove the call to execute the AsyncTask
-        new GithubQueryTask().execute(githubSearchUrl);
+        // COMPLETED (18) Remove the call to execute the AsyncTask
 
         // TODO (19) Create a bundle called queryBundle
         // TODO (20) Use putString with SEARCH_QUERY_URL_EXTRA as the key and the String value of the URL as the value
