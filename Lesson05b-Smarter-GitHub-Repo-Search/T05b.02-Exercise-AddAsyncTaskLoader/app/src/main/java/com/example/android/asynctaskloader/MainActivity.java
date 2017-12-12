@@ -190,7 +190,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
     }
 
-    // TODO (16) Override onLoaderReset as it is part of the interface we implement, but don't do anything in this method
+    // COMPLETED (16) Override onLoaderReset as it is part of the interface we implement, but don't do anything in this method
+    @Override
+    public void onLoaderReset(Loader<String> loader) {
+    }
 
     // TODO (29) Delete the AsyncTask class
     @SuppressLint("StaticFieldLeak")
