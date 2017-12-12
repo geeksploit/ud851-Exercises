@@ -178,7 +178,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     // COMPLETED (13) Override onLoadFinished
     @Override
     public void onLoadFinished(Loader<String> loader, String data) {
-        // Within onLoadFinished
         // COMPLETED (14) Hide the loading indicator
         mLoadingIndicator.setVisibility(View.GONE);
 
@@ -189,7 +188,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             showJsonDataView();
             mSearchResultsTextView.setText(data);
         }
-        // END - onLoadFinished
     }
 
     // TODO (16) Override onLoaderReset as it is part of the interface we implement, but don't do anything in this method
