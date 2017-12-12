@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         return new AsyncTaskLoader<String>(this) {
             // COMPLETED (5) Override onStartLoading
             protected void onStartLoading() {
-                // Within onStartLoading
                 // COMPLETED (6) If args is null, return.
                 if (args == null) return;
 
@@ -151,7 +150,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 // COMPLETED (8) Force a load
                 forceLoad();
-                // END - onStartLoading
             }
 
             // TODO (9) Override loadInBackground
