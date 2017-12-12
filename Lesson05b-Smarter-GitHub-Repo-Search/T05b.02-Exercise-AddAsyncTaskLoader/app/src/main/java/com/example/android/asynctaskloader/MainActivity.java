@@ -149,7 +149,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // COMPLETED (7) Show the loading indicator
                 mLoadingIndicator.setVisibility(View.VISIBLE);
 
-                // TODO (8) Force a load
+                // COMPLETED (8) Force a load
+                forceLoad();
                 // END - onStartLoading
             }
 
