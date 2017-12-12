@@ -112,7 +112,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         LoaderManager loaderManager = getSupportLoaderManager();
         // COMPLETED (22) Get our Loader by calling getLoader and passing the ID we specified
         Loader<String> loader = loaderManager.getLoader(GITHUB_SEARCH_LOADER);
-        // TODO (23) If the Loader was null, initialize it. Else, restart it.
+        // COMPLETED (23) If the Loader was null, initialize it. Else, restart it.
+        if (loader == null) {
+            loaderManager.initLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
+        } else {
+            loaderManager.restartLoader(GITHUB_SEARCH_LOADER, queryBundle, this);
+        }
     }
 
     /**
