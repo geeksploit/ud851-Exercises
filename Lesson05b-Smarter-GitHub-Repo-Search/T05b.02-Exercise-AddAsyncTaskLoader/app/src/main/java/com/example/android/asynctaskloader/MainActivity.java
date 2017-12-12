@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // COMPLETED (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
         return new AsyncTaskLoader<String>(this) {
             // COMPLETED (5) Override onStartLoading
+            @Override
             protected void onStartLoading() {
                 // COMPLETED (6) If args is null, return.
                 if (args == null) return;
