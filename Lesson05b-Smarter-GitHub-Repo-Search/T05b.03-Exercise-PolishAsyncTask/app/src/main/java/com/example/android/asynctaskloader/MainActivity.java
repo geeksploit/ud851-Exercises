@@ -214,8 +214,12 @@ public class MainActivity extends AppCompatActivity implements
                 }
             }
 
-            // TODO (3) Override deliverResult and store the data in mGithubJson
+            // COMPLETED (3) Override deliverResult and store the data in mGithubJson
             // TODO (4) Call super.deliverResult after storing the data
+            @Override
+            public void deliverResult(String data) {
+                mGithubJson = data;
+            }
         };
     }
 
