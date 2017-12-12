@@ -15,6 +15,7 @@
  */
 package com.example.android.asynctaskloader;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
@@ -170,6 +171,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     // TODO (16) Override onLoaderReset as it is part of the interface we implement, but don't do anything in this method
 
     // TODO (29) Delete the AsyncTask class
+    @SuppressLint("StaticFieldLeak")
     public class GithubQueryTask extends AsyncTask<URL, Void, String> {
 
         @Override
