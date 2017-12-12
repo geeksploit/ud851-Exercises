@@ -146,7 +146,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // COMPLETED (6) If args is null, return.
                 if (args == null) return;
 
-                // TODO (7) Show the loading indicator
+                // COMPLETED (7) Show the loading indicator
+                mLoadingIndicator.setVisibility(View.VISIBLE);
 
                 // TODO (8) Force a load
                 // END - onStartLoading
