@@ -137,13 +137,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     // COMPLETED (3) Override onCreateLoader
-    public Loader<String> onCreateLoader(int id, Bundle args) {
+    public Loader<String> onCreateLoader(int id, final Bundle args) {
         // COMPLETED (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
         return new AsyncTaskLoader<String>(this) {
             // COMPLETED (5) Override onStartLoading
             protected void onStartLoading() {
                 // Within onStartLoading
-                // TODO (6) If args is null, return.
+                // COMPLETED (6) If args is null, return.
+                if (args == null) return;
 
                 // TODO (7) Show the loading indicator
 
