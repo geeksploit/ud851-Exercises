@@ -263,8 +263,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String queryUrl = mUrlDisplayTextView.getText().toString();
         outState.putString(SEARCH_QUERY_URL_EXTRA, queryUrl);
 
-        // TODO (27) Remove the code that persists the JSON
-        String rawJsonSearchResults = mSearchResultsTextView.getText().toString();
-        outState.putString(SEARCH_RESULTS_RAW_JSON, rawJsonSearchResults);
+        // COMPLETED (27) Remove the code that persists the JSON
     }
 }
