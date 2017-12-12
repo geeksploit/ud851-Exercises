@@ -103,8 +103,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // COMPLETED (18) Remove the call to execute the AsyncTask
 
-        // TODO (19) Create a bundle called queryBundle
+        // COMPLETED (19) Create a bundle called queryBundle
         // TODO (20) Use putString with SEARCH_QUERY_URL_EXTRA as the key and the String value of the URL as the value
+        Bundle queryBundle = new Bundle();
 
         // TODO (21) Call getSupportLoaderManager and store it in a LoaderManager variable
         // TODO (22) Get our Loader by calling getLoader and passing the ID we specified
