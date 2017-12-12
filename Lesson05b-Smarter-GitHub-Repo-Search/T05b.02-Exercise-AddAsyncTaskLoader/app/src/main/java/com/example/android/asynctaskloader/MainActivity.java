@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     // COMPLETED (3) Override onCreateLoader
     @SuppressLint("StaticFieldLeak")
+    @Override
     public Loader<String> onCreateLoader(int id, final Bundle args) {
         // COMPLETED (4) Return a new AsyncTaskLoader<String> as an anonymous inner class with this as the constructor's parameter
         return new AsyncTaskLoader<String>(this) {
