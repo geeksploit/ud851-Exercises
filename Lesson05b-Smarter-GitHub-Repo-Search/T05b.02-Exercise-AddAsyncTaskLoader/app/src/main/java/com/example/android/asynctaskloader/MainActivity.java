@@ -77,8 +77,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             String rawJsonSearchResults = savedInstanceState.getString(SEARCH_RESULTS_RAW_JSON);
 
             mUrlDisplayTextView.setText(queryUrl);
-            // TODO (25) Remove the code that displays the JSON
-            mSearchResultsTextView.setText(rawJsonSearchResults);
+            // COMPLETED (25) Remove the code that displays the JSON
         }
 
         // COMPLETED (24) Initialize the loader with GITHUB_SEARCH_LOADER as the ID, null for the bundle, and this for the context
