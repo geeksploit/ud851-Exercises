@@ -182,7 +182,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // COMPLETED (14) Hide the loading indicator
         mLoadingIndicator.setVisibility(View.GONE);
 
-        // TODO (15) Use the same logic used in onPostExecute to show the data or the error message
+        // COMPLETED (15) Use the same logic used in onPostExecute to show the data or the error message
+        if (data == null || data.isEmpty()) {
+            showErrorMessage();
+        } else {
+            showJsonDataView();
+            mSearchResultsTextView.setText(data);
+        }
         // END - onLoadFinished
     }
 
