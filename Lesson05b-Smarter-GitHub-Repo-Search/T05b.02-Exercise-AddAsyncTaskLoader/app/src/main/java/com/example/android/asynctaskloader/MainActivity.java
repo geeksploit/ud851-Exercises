@@ -163,7 +163,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // COMPLETED (11) If the URL is null or empty, return null
                 if (searchQueryUrlString == null || searchQueryUrlString.isEmpty()) return null;
 
-                // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
+                // COMPLETED (12) Copy the try / catch block from the AsyncTask's doInBackground method
+                try {
+                    URL searchUrl = new URL(searchQueryUrlString);
+                    return NetworkUtils.getResponseFromHttpUrl(searchUrl);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 // END - loadInBackground
                 return null;
             }
