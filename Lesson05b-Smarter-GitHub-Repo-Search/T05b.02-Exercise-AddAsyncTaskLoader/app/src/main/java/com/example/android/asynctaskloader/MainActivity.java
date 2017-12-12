@@ -160,7 +160,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 // COMPLETED (10) Get the String for our URL from the bundle passed to onCreateLoader
                 String searchQueryUrlString = args.getString(SEARCH_QUERY_URL_EXTRA);
 
-                // TODO (11) If the URL is null or empty, return null
+                // COMPLETED (11) If the URL is null or empty, return null
+                if (searchQueryUrlString == null || searchQueryUrlString.isEmpty()) return null;
 
                 // TODO (12) Copy the try / catch block from the AsyncTask's doInBackground method
                 // END - loadInBackground
