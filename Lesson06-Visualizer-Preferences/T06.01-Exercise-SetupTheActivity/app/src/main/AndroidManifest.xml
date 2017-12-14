@@ -19,7 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/menu_settings">
+        </activity>
     </application>
 
     <!-- TODO (7) Modify here and inside of SettingsActivity so that VisualizerActivity is treated
