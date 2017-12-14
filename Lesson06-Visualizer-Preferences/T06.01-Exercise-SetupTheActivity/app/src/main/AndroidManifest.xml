@@ -21,7 +21,11 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/menu_settings">
+            android:label="@string/menu_settings"
+            android:parentActivityName=".VisualizerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VisualizerActivity" />
         </activity>
     </application>
 
