@@ -61,7 +61,16 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         // TODO (3) Register the listener
     }
 
-    // TODO (2) Override the onSharedPreferenceChanged method and update the show bass preference
+    // COMPLETED (2) Override the onSharedPreferenceChanged method and update the show bass preference
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals(getString(R.string.pref_show_bass_key))) {
+            boolean show_bass_default = getResources().getBoolean(R.bool.pref_show_bass_default);
+            boolean show_bass_value = sharedPreferences.getBoolean(key, show_bass_default);
+            mVisualizerView.setShowBass(show_bass_value);
+        }
+    }
+
     // TODO (4) Override onDestroy and unregister the listener
 
     /**
