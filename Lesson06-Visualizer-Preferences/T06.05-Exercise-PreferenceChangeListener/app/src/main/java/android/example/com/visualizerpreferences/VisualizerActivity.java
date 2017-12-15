@@ -72,7 +72,13 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         }
     }
 
-    // TODO (4) Override onDestroy and unregister the listener
+    // COMPLETED (4) Override onDestroy and unregister the listener
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
 
     /**
      * Methods for setting up the menu
