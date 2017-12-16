@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="pref_color_list_entries">
+        <item>@string/pref_color_red_label</item>
+        <item>@string/pref_color_green_label</item>
+        <item>@string/pref_color_blue_label</item>
+    </array>
 </resources>
