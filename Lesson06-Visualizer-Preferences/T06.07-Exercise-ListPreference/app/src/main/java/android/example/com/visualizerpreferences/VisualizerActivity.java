@@ -65,6 +65,13 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
 
+    private void setColorFromPreferences(SharedPreferences preferences) {
+        String preferencesColorKey = getString(R.string.pref_color_list_key);
+        String defaultColorKey = getString(R.string.pref_color_red_label);
+        String newColorKey = preferences.getString(preferencesColorKey, defaultColorKey);
+        mVisualizerView.setColor(newColorKey);
+    }
+
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(getString(R.string.pref_show_bass_key))) {
