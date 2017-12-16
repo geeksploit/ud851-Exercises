@@ -16,11 +16,14 @@ package android.example.com.visualizerpreferences;
  * limitations under the License.
  */
 
+import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
+import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
+import android.support.v7.preference.PreferenceScreen;
 
 // COMPLETED (1) Implement OnSharedPreferenceChangeListener
 public class SettingsFragment extends PreferenceFragmentCompat
@@ -32,9 +35,19 @@ public class SettingsFragment extends PreferenceFragmentCompat
         // Add visualizer preferences, defined in the XML file in res->xml->pref_visualizer
         addPreferencesFromResource(R.xml.pref_visualizer);
 
-        // TODO (3) Get the preference screen, get the number of preferences and iterate through
+        // COMPLETED (3) Get the preference screen, get the number of preferences and iterate through
         // all of the preferences if it is not a checkbox preference, call the setSummary method
         // passing in a preference and the value of the preference
+        PreferenceScreen preferenceScreen = getPreferenceScreen();
+        SharedPreferences sharedPreferences = preferenceScreen.getSharedPreferences();
+        int preferenceCount = preferenceScreen.getPreferenceCount();
+        for (int i = 0; i < preferenceCount; i++) {
+            Preference preference = preferenceScreen.getPreference(i);
+            if (preference instanceof CheckBoxPreference) continue;
+            String key = preference.getKey();
+            String value = sharedPreferences.getString(key,"");
+            setPreferenceSummary(preference, value);
+        }
     }
 
     // TODO (4) Override onSharedPreferenceChanged and, if it is not a checkbox preference,
