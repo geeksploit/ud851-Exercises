@@ -53,7 +53,9 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
                 setPreferenceSummary(p, value);
             }
         }
-        // TODO (3) Add the OnPreferenceChangeListener specifically to the EditTextPreference
+        // COMPLETED (3) Add the OnPreferenceChangeListener specifically to the EditTextPreference
+        Preference sizePreference = findPreference(getString(R.string.pref_size_key));
+        sizePreference.setOnPreferenceChangeListener(this);
     }
 
     @Override
