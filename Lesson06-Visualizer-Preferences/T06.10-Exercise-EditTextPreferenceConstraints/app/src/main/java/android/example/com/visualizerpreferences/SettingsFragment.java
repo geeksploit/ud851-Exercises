@@ -90,10 +90,39 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         }
     }
 
-    // TODO (2) Override onPreferenceChange. This method should try to convert the new preference value
+    // COMPLETED (2) Override onPreferenceChange. This method should try to convert the new preference value
     // to a float; if it cannot, show a helpful error message and return false. If it can be converted
     // to a float check that that float is between 0 (exclusive) and 3 (inclusive). If it isn't, show
     // an error message and return false. If it is a valid number, return true.
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String preferenceKey = preference.getKey();
+        String sizeKey = getString(R.string.pref_size_key);
+        if (preferenceKey.equals(sizeKey)) {
+            if (newValue == null) return false;
+            String sizeString = ((String) newValue).trim();
+            try {
+                float size = Float.parseFloat(sizeString);
+                if (size <= 0
+                        || size > 3) {
+                    Toast.makeText(getContext(),
+                            "The number should be greater than 0 and less than (or equal to) 3.",
+                            Toast.LENGTH_LONG)
+                            .show();
+                    return false;
+                }
+                return true;
+            } catch (NumberFormatException e) {
+                Toast.makeText(getContext(),
+                        "This is not a number.\nPlease, enter a number.",
+                        Toast.LENGTH_LONG)
+                        .show();
+                return false;
+            }
+        }
+        return false;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
