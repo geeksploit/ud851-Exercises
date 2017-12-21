@@ -1,6 +1,7 @@
 package com.example.android.waitlist.data;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 // COMPLETED (1) extend the SQLiteOpenHelper class
@@ -17,11 +18,13 @@ public class WaitlistDbHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    // TODO (5) Override the onCreate method
-
+    // COMPLETED (5) Override the onCreate method
+    @Override
+    public void onCreate(SQLiteDatabase db) {
         // TODO (6) Inside, create an String query called SQL_CREATE_WAITLIST_TABLE that will create the table
 
         // TODO (7) Execute the query by calling execSQL on sqLiteDatabase and pass the string query SQL_CREATE_WAITLIST_TABLE
+    }
 
     // TODO (8) Override the onUpgrade method
 
