@@ -85,7 +85,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        // TODO (14) call addNewGuest with the guest name and party size
+        // COMPLETED (14) call addNewGuest with the guest name and party size
+        String guestName = mNewGuestNameEditText.getText().toString();
+        addGuest(guestName, partySize);
 
         // TODO (19) call mAdapter.swapCursor to update the cursor by passing in getAllGuests()
 
