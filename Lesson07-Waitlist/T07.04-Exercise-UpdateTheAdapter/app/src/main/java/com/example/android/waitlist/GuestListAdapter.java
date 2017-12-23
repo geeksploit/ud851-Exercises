@@ -51,7 +51,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         holder.nameTextView.setText(name);
 
         // COMPLETED (9) Set the holder's partySizeTextView text to the party size
-        holder.partySizeTextView.setText(partySize);
+        holder.partySizeTextView.setText(String.valueOf(partySize));
     }
 
     @Override
