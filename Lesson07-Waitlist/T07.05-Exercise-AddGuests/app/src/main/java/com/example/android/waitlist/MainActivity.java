@@ -77,8 +77,12 @@ public class MainActivity extends AppCompatActivity {
         int partySize = 1;
 
         // COMPLETED (11) Use Integer.parseInt to parse mNewPartySizeEditText.getText to an integer
-        // TODO (12) Make sure you surround the Integer.parseInt with a try catch and log any exception
-        partySize = Integer.parseInt(mNewPartySizeEditText.getText().toString());
+        // COMPLETED (12) Make sure you surround the Integer.parseInt with a try catch and log any exception
+        try {
+            partySize = Integer.parseInt(mNewPartySizeEditText.getText().toString());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         // TODO (14) call addNewGuest with the guest name and party size
 
