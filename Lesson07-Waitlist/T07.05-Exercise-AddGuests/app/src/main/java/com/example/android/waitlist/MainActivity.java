@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 mNewPartySizeEditText.length() == 0)
             return;
 
-        // TODO (10) Create an integer to store the party size and initialize to 1
+        // COMPLETED (10) Create an integer to store the party size and initialize to 1
+        int partySize = 1;
 
         // TODO (11) Use Integer.parseInt to parse mNewPartySizeEditText.getText to an integer
 
