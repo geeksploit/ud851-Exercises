@@ -23,8 +23,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     // COMPLETED (2) Modify the constructor to accept a cursor rather than an integer
     public GuestListAdapter(Context context, Cursor cursor) {
         this.mContext = context;
-        // TODO (3) Set the local mCursor to be equal to cursor
-        mCount = count;
+        // COMPLETED (3) Set the local mCursor to be equal to cursor
+        mCursor = cursor;
     }
 
     @Override
