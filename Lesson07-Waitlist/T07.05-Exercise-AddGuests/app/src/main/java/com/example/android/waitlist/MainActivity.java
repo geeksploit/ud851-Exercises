@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     EditText mNewGuestNameEditText;
     EditText mNewPartySizeEditText;
 
-    // TODO (13) Create a constant string LOG_TAG that is equal to the class.getSimpleName()
+    // COMPLETED (13) Create a constant string LOG_TAG that is equal to the class.getSimpleName()
+    public static final String LOG_TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
