@@ -102,16 +102,13 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    // TODO (4) Create a new addGuest method
-
+    // COMPLETED (4) Create a new addGuest method
     // TODO (5) Inside, create a ContentValues instance to pass the values onto the insert query
-
     // TODO (6) call put to insert the name value with the key COLUMN_GUEST_NAME
-
     // TODO (7) call put to insert the party size value with the key COLUMN_PARTY_SIZE
-
     // TODO (8) call insert to run an insert query on TABLE_NAME with the ContentValues created
-
+    private void addGuest(String guestName, int partySize) {
+    }
 
 
 }
