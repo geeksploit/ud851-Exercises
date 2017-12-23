@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (10) Create an integer to store the party size and initialize to 1
         int partySize = 1;
 
-        // TODO (11) Use Integer.parseInt to parse mNewPartySizeEditText.getText to an integer
-
+        // COMPLETED (11) Use Integer.parseInt to parse mNewPartySizeEditText.getText to an integer
         // TODO (12) Make sure you surround the Integer.parseInt with a try catch and log any exception
+        partySize = Integer.parseInt(mNewPartySizeEditText.getText().toString());
 
         // TODO (14) call addNewGuest with the guest name and party size
 
