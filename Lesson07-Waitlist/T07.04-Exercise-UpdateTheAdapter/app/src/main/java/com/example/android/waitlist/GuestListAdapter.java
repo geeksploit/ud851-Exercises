@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.android.waitlist.data.WaitlistContract;
-
 
 public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.GuestViewHolder> {
 
@@ -20,9 +18,10 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     /**
      * Constructor using the context and the db cursor
      * @param context the calling context/activity
+     * @param cursor a cursor pointing to data set
      */
-    // TODO (2) Modify the constructor to accept a cursor rather than an integer
-    public GuestListAdapter(Context context, int count) {
+    // COMPLETED (2) Modify the constructor to accept a cursor rather than an integer
+    public GuestListAdapter(Context context, Cursor cursor) {
         this.mContext = context;
         // TODO (3) Set the local mCursor to be equal to cursor
         mCount = count;
