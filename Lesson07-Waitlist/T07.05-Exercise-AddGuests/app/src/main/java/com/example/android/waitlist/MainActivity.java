@@ -1,13 +1,11 @@
 package com.example.android.waitlist;
 
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -21,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private GuestListAdapter mAdapter;
     private SQLiteDatabase mDb;
 
-    // TODO (1) Create local EditText members for mNewGuestNameEditText and mNewPartySizeEditText
+    // COMPLETED (1) Create local EditText members for mNewGuestNameEditText and mNewPartySizeEditText
+    EditText mNewGuestNameEditText;
+    EditText mNewPartySizeEditText;
 
     // TODO (13) Create a constant string LOG_TAG that is equal to the class.getSimpleName()
 
