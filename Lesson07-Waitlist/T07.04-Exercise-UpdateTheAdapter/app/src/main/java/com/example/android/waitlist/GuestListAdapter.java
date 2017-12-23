@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.waitlist.data.WaitlistContract.WaitlistEntry;
 
 public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.GuestViewHolder> {
 
@@ -40,7 +41,8 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
         // COMPLETED (5) Move the cursor to the passed in position, return if moveToPosition returns false
         if (!mCursor.moveToPosition(position)) return;
 
-        // TODO (6) Call getString on the cursor to get the guest's name
+        // COMPLETED (6) Call getString on the cursor to get the guest's name
+        String name = mCursor.getString(mCursor.getColumnIndex(WaitlistEntry.COLUMN_GUEST_NAME));
 
         // TODO (7) Call getInt on the cursor to get the party size
 
