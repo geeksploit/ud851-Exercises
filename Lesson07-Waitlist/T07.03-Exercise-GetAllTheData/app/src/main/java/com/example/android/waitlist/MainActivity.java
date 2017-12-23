@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (4) call insertFakeData from TestUtil and pass the database reference mDb
         TestUtil.insertFakeData(mDb);
 
-        // TODO (7) Run the getAllGuests function and store the result in a Cursor variable
+        // COMPLETED (7) Run the getAllGuests function and store the result in a Cursor variable
+        Cursor allGuestsCursor = getAllGuests();
 
         // TODO (12) Pass the resulting cursor count to the adapter
 
