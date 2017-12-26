@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -56,15 +57,15 @@ public class MainActivity extends AppCompatActivity {
         waitlistRecyclerView.setAdapter(mAdapter);
 
 
-        //TODO (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
-
+        // COMPLETED (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
         // TODO (4) Override onMove and simply return false inside
-
         // TODO (5) Override onSwiped
-
         // TODO (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
         // TODO (9) call removeGuest and pass through that id
         // TODO (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+                0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+        });
 
         //TODO (11) attach the ItemTouchHelper to the waitlistRecyclerView
 
