@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (5) Override onSwiped
         // COMPLETED (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
         // COMPLETED (9) call removeGuest and pass through that id
-        // TODO (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
+        // COMPLETED (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
                 0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 long id = (long) viewHolder.itemView.getTag();
                 removeGuest(id);
+                mAdapter.swapCursor(getAllGuests());
             }
         });
 
