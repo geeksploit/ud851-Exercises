@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         // COMPLETED (3) Create a new ItemTouchHelper with a SimpleCallback that handles both LEFT and RIGHT swipe directions
         // COMPLETED (4) Override onMove and simply return false inside
-        // TODO (5) Override onSwiped
+        // COMPLETED (5) Override onSwiped
         // TODO (8) Inside, get the viewHolder's itemView's tag and store in a long variable id
         // TODO (9) call removeGuest and pass through that id
         // TODO (10) call swapCursor on mAdapter passing in getAllGuests() as the argument
@@ -68,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
                 return false;
+            }
+
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
             }
         });
 
