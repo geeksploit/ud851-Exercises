@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //TODO (11) attach the ItemTouchHelper to the waitlistRecyclerView
+        // COMPLETED (11) attach the ItemTouchHelper to the waitlistRecyclerView
+        itemTouchHelper.attachToRecyclerView(waitlistRecyclerView);
 
     }
 
