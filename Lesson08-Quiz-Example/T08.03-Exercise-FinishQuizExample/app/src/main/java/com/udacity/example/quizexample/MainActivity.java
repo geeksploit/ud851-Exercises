@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
     // advance the app to the next word
     private final int STATE_SHOWN = 1;
 
+    // Cursor column indices
+    private int mDefinitionColumnIndex;
+    private int mWordColumnIndex;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,8 +145,12 @@ public class MainActivity extends AppCompatActivity {
             // Set the data for MainActivity
             mData = cursor;
 
-            // TODO (2) Initialize anything that you need the cursor for, such as setting up
+            // COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
+            mWordColumnIndex = cursor.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD);
+            mDefinitionColumnIndex = cursor.getColumnIndex(DroidTermsExampleContract.COLUMN_DEFINITION);
+
+            nextWord();
         }
     }
 
