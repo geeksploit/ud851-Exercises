@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
         // Get the views
         mButton = (Button) findViewById(R.id.button_next);
 
-        // TODO (5) Create and execute your AsyncTask here
+        // COMPLETED (5) Create and execute your AsyncTask here
+        new AsyncTaskToRetrieveCursor().execute();
     }
 
     /**
