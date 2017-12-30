@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     // The current state of the app
     private int mCurrentState;
 
-    // TODO (3) Create an instance variable storing a Cursor called mData
+    // COMPLETED (3) Create an instance variable storing a Cursor called mData
+    private Cursor mData;
     private Button mButton;
 
     // This state is when the word definition is hidden and clicking the button will therefore
