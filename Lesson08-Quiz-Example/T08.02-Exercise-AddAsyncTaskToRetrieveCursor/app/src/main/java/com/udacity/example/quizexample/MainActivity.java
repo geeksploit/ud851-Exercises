@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (1) Create AsyncTask with the following generic types <Void, Void, Cursor>
     // COMPLETED (2) In the doInBackground method, write the code to access the DroidTermsExample
     // provider and return the Cursor object
-    // TODO (4) In the onPostExecute method, store the Cursor object in mData
+    // COMPLETED (4) In the onPostExecute method, store the Cursor object in mData
     class AsyncTaskToRetrieveCursor extends AsyncTask<Void, Void, Cursor> {
         @Override
         protected Cursor doInBackground(Void... voids) {
@@ -109,6 +109,12 @@ public class MainActivity extends AppCompatActivity {
                     null,
                     null,
                     null);
+        }
+
+        @Override
+        protected void onPostExecute(Cursor cursor) {
+            super.onPostExecute(cursor);
+            mData = cursor;
         }
     }
 }
