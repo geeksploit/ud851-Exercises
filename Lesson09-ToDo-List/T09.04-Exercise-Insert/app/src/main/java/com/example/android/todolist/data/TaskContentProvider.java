@@ -83,11 +83,12 @@ public class TaskContentProvider extends ContentProvider {
         SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
 
         // COMPLETED (2) Write URI matching code to identify the match for the tasks directory
-        // TODO (3) Insert new values into the database
+        // COMPLETED (3) Insert new values into the database
         // TODO (4) Set the value for the returnedUri and write the default case for unknown URI's
         int match = sUriMatcher.match(uri);
         switch (match) {
             case TaskContentProvider.TASKS:
+                long id = db.insert(TaskContract.TaskEntry.TABLE_NAME, null, values);
                 break;
         }
 
