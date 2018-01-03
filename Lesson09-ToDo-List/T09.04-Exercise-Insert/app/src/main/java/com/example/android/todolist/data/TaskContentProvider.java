@@ -103,9 +103,10 @@ public class TaskContentProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
         }
 
-        // TODO (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
+        // COMPLETED (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
+        getContext().getContentResolver().notifyChange(returnedUri, null);
 
-        throw new UnsupportedOperationException("Not yet implemented");
+        return returnedUri;
     }
 
 
