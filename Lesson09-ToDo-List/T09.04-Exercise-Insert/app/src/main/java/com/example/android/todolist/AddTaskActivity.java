@@ -68,6 +68,7 @@ public class AddTaskActivity extends AppCompatActivity {
         }
 
         // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
+        finish();
 
     }
 
