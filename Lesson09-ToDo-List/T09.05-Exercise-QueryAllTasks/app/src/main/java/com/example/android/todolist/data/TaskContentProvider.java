@@ -123,7 +123,9 @@ public class TaskContentProvider extends ContentProvider {
         // COMPLETED (1) Get access to underlying database (read-only for query)
         final SQLiteDatabase db = mTaskDbHelper.getReadableDatabase();
 
-        // TODO (2) Write URI match code and set a variable to return a Cursor
+        // COMPLETED (2) Write URI match code and set a variable to return a Cursor
+        int match = sUriMatcher.match(uri);
+        Cursor returnedCursor;
 
         // TODO (3) Query for the tasks directory and write a default case
 
