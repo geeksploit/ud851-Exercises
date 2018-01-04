@@ -127,7 +127,20 @@ public class TaskContentProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
         Cursor returnedCursor;
 
-        // TODO (3) Query for the tasks directory and write a default case
+        // COMPLETED (3) Query for the tasks directory and write a default case
+        switch (match) {
+            case TaskContentProvider.TASKS:
+                returnedCursor =  db.query(TaskContract.TaskEntry.TABLE_NAME,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        TaskContract.TaskEntry.COLUMN_PRIORITY);
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown URI: " + uri);
+        }
 
         // TODO (4) Set a notification URI on the Cursor and return that Cursor
 
