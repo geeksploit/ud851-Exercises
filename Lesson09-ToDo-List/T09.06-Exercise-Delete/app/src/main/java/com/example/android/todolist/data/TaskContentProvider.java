@@ -160,10 +160,14 @@ public class TaskContentProvider extends ContentProvider {
         SQLiteDatabase db = mTaskDbHelper.getWritableDatabase();
         int match = sUriMatcher.match(uri);
 
-        // TODO (2) Write the code to delete a single row of data
+        // COMPLETED (2) Write the code to delete a single row of data
         // [Hint] Use selections to delete an item by its row ID
+        int deletedRows;
         switch (match) {
             case TaskContentProvider.TASK_WITH_ID:
+                deletedRows = db.delete(TaskContract.TaskEntry.TABLE_NAME,
+                        selection,
+                        selectionArgs);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
