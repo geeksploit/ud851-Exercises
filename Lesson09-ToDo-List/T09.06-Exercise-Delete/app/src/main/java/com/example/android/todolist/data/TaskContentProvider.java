@@ -173,9 +173,10 @@ public class TaskContentProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
         }
 
-        // TODO (3) Notify the resolver of a change and return the number of items deleted
+        // COMPLETED (3) Notify the resolver of a change and return the number of items deleted
+        getContext().getContentResolver().notifyChange(uri, null);
 
-        throw new UnsupportedOperationException("Not yet implemented");
+        return deletedRows;
     }
 
 
