@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity implements
                 String id = String.valueOf((int) viewHolder.itemView.getTag());
                 Uri uri = TaskContract.TaskEntry.CONTENT_URI.buildUpon().appendPath(id).build();
 
-                // TODO (2) Delete a single row of data using a ContentResolver
+                // COMPLETED (2) Delete a single row of data using a ContentResolver
+                getContentResolver().delete(uri, null, null);
 
                 // TODO (3) Restart the loader to re-query for all tasks after a deletion
                 
