@@ -174,7 +174,9 @@ public class TaskContentProvider extends ContentProvider {
         }
 
         // COMPLETED (3) Notify the resolver of a change and return the number of items deleted
-        getContext().getContentResolver().notifyChange(uri, null);
+        if (deletedRows > 0) {
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
 
         return deletedRows;
     }
