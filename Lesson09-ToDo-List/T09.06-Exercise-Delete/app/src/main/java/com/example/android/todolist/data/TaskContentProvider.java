@@ -165,9 +165,12 @@ public class TaskContentProvider extends ContentProvider {
         int deletedRows;
         switch (match) {
             case TaskContentProvider.TASK_WITH_ID:
+                String id = uri.getLastPathSegment();
+                String whereClause = "_id=?";
+                String[] whereArgs = new String[]{id};
                 deletedRows = db.delete(TaskContract.TaskEntry.TABLE_NAME,
-                        selection,
-                        selectionArgs);
+                        whereClause,
+                        whereArgs);
                 break;
             default:
                 throw new UnsupportedOperationException("Unknown URI: " + uri);
