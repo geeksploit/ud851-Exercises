@@ -21,7 +21,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 
 // COMPLETED (9) Create WaterReminderIntentService and extend it from IntentService
-class WaterReminderIntentService extends IntentService {
+public class WaterReminderIntentService extends IntentService {
 
     // COMPLETED (10) Create a default constructor that calls super with the name of this class
     public WaterReminderIntentService() {
