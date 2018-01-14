@@ -13,7 +13,14 @@ class ReminderTasks {
     // COMPLETED (6) Create a public static void method called executeTask
     // COMPLETED (7) Add a Context called context and String parameter called action to the parameter list
     public static void executeTask(Context context, String action) {
-// TODO (8) If the action equals ACTION_INCREMENT_WATER_COUNT, call this class's incrementWaterCount
+        // COMPLETED (8) If the action equals ACTION_INCREMENT_WATER_COUNT, call this class's incrementWaterCount
+        switch (action) {
+            case ACTION_INCREMENT_WATER_COUNT:
+                incrementWaterCount(context);
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown action: " + action);
+        }
     }
 
     // COMPLETED (3) Create a private static void method called incrementWaterCount
