@@ -19,7 +19,10 @@ import android.app.IntentService;
 // COMPLETED (9) Create WaterReminderIntentService and extend it from IntentService
 class WaterReminderIntentService extends IntentService {
 
-//  TODO (10) Create a default constructor that calls super with the name of this class
+    // COMPLETED (10) Create a default constructor that calls super with the name of this class
+    public WaterReminderIntentService() {
+        super(WaterReminderIntentService.class.getSimpleName());
+    }
 
 //  TODO (11) Override onHandleIntent
 //      TODO (12) Get the action from the Intent that started this Service
