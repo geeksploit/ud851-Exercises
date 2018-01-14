@@ -87,7 +87,8 @@ public class MainActivity extends AppCompatActivity implements
         Intent intent = new Intent(this, WaterReminderIntentService.class);
         // COMPLETED (16) Set the action of the intent to ACTION_INCREMENT_WATER_COUNT
         intent.setAction(ReminderTasks.ACTION_INCREMENT_WATER_COUNT);
-        // TODO (17) Call startService and pass the explicit intent you just created
+        // COMPLETED (17) Call startService and pass the explicit intent you just created
+        startService(intent);
     }
 
     @Override
