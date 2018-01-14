@@ -1,3 +1,5 @@
+package com.example.android.background.sync;
+
 /*
  * Copyright (C) 2016 The Android Open Source Project
  *
