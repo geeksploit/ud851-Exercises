@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import com.example.android.background.MainActivity;
+import com.example.android.background.R;
 
 /**
  * Utility class for creating hydration notifications
@@ -65,8 +67,9 @@ public class NotificationUtils {
     public static Bitmap getLargeIcon(Context context) {
         // COMPLETED (5) Get a Resources object from the context.
         Resources resources = context.getResources();
-        // TODO (6) Create and return a bitmap using BitmapFactory.decodeResource, passing in the
+        // COMPLETED (6) Create and return a bitmap using BitmapFactory.decodeResource, passing in the
         // resources object and R.drawable.ic_local_drink_black_24px
+        return BitmapFactory.decodeResource(resources, R.drawable.ic_local_drink_black_24px);
     }
 
 }
