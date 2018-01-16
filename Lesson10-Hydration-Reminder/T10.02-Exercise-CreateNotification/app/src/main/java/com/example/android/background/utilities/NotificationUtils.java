@@ -2,6 +2,9 @@ package com.example.android.background.utilities;
 
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+
+import com.example.android.background.MainActivity;
 
 /**
  * Utility class for creating hydration notifications
@@ -35,7 +38,8 @@ public class NotificationUtils {
     // should return a PendingIntent. This method will create the pending intent which will trigger when
     // the notification is pressed. This pending intent should open up the MainActivity.
     public PendingIntent contentIntent(Context context) {
-        // TODO (2) Create an intent that opens up the MainActivity
+        // COMPLETED (2) Create an intent that opens up the MainActivity
+        Intent intentToOpenMainActivity = new Intent(context, MainActivity.class);
         // TODO (3) Create a PendingIntent using getActivity that:
         // - Take the context passed in as a parameter
         // - Takes an unique integer ID for the pending intent (you can create a constant for
