@@ -17,10 +17,11 @@ public class NotificationUtils {
 
     private static final int PENDING_INTENT_REQUEST_CODE = 42;
 
-    // TODO (7) Create a method called remindUserBecauseCharging which takes a Context.
+    // COMPLETED (7) Create a method called remindUserBecauseCharging which takes a Context.
     // This method will create a notification for charging. It might be helpful
     // to take a look at this guide to see an example of what the code in this method will look like:
     // https://developer.android.com/training/notify-user/build-notification.html
+    public static void remindUserWhileBecauseCharging(Context context) {
         // TODO (8) In the remindUser method use NotificationCompat.Builder to create a notification
         // that:
         // - has a color of R.colorPrimary - use ContextCompat.getColor to get a compatible color
@@ -37,7 +38,7 @@ public class NotificationUtils {
         // TODO (11) Get a NotificationManager, using context.getSystemService(Context.NOTIFICATION_SERVICE);
         // TODO (12) Trigger the notification by calling notify on the NotificationManager.
         // Pass in a unique ID of your choosing for the notification and notificationBuilder.build()
-
+    }
 
 
     // COMPLETED (1) Create a helper method called contentIntent with a single parameter for a Context. It
