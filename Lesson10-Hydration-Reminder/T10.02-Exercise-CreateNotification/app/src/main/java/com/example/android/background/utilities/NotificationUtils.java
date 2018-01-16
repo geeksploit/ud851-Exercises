@@ -39,7 +39,7 @@ public class NotificationUtils {
     // COMPLETED (1) Create a helper method called contentIntent with a single parameter for a Context. It
     // should return a PendingIntent. This method will create the pending intent which will trigger when
     // the notification is pressed. This pending intent should open up the MainActivity.
-    public PendingIntent contentIntent(Context context) {
+    public static PendingIntent contentIntent(Context context) {
         // COMPLETED (2) Create an intent that opens up the MainActivity
         Intent intentToOpenMainActivity = new Intent(context, MainActivity.class);
         // COMPLETED (3) Create a PendingIntent using getActivity that:
