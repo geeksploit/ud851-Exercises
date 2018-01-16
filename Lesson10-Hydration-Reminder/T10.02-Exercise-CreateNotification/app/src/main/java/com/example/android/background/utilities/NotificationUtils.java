@@ -15,7 +15,7 @@ import com.example.android.background.R;
  */
 public class NotificationUtils {
 
-    public static final int PENDING_INTENT_REQUEST_CODE = 42;
+    private static final int PENDING_INTENT_REQUEST_CODE = 42;
 
     // TODO (7) Create a method called remindUserBecauseCharging which takes a Context.
     // This method will create a notification for charging. It might be helpful
