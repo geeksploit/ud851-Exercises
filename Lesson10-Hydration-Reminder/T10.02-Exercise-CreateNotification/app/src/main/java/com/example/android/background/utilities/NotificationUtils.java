@@ -11,6 +11,8 @@ import com.example.android.background.MainActivity;
  */
 public class NotificationUtils {
 
+    public static final int PENDING_INTENT_REQUEST_CODE = 42;
+
     // TODO (7) Create a method called remindUserBecauseCharging which takes a Context.
     // This method will create a notification for charging. It might be helpful
     // to take a look at this guide to see an example of what the code in this method will look like:
@@ -40,7 +42,7 @@ public class NotificationUtils {
     public PendingIntent contentIntent(Context context) {
         // COMPLETED (2) Create an intent that opens up the MainActivity
         Intent intentToOpenMainActivity = new Intent(context, MainActivity.class);
-        // TODO (3) Create a PendingIntent using getActivity that:
+        // COMPLETED (3) Create a PendingIntent using getActivity that:
         // - Take the context passed in as a parameter
         // - Takes an unique integer ID for the pending intent (you can create a constant for
         //   this integer above
@@ -48,6 +50,12 @@ public class NotificationUtils {
         //   when the notification is triggered
         // - Has the flag FLAG_UPDATE_CURRENT, so that if the intent is created again, keep the
         // intent but update the data
+        return PendingIntent.getActivity(
+                context,
+                PENDING_INTENT_REQUEST_CODE,
+                intentToOpenMainActivity,
+                PendingIntent.FLAG_UPDATE_CURRENT
+        );
     }
 
     // TODO (4) Create a helper method called largeIcon which takes in a Context as a parameter and
