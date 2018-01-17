@@ -27,7 +27,7 @@ public class NotificationUtils {
     // This method will create a notification for charging. It might be helpful
     // to take a look at this guide to see an example of what the code in this method will look like:
     // https://developer.android.com/training/notify-user/build-notification.html
-    public static void remindUserWhileBecauseCharging(Context context) {
+    public static void remindUserBecauseCharging(Context context) {
         // COMPLETED (8) In the remindUser method use NotificationCompat.Builder to create a notification
         // that:
         // - has a color of R.colorPrimary - use ContextCompat.getColor to get a compatible color
