@@ -21,6 +21,7 @@ import com.example.android.background.R;
 public class NotificationUtils {
 
     private static final int PENDING_INTENT_REQUEST_CODE = 42;
+    private static final int WATER_REMINDER_NOTIFICATION_ID = 675;
 
     // COMPLETED (7) Create a method called remindUserBecauseCharging which takes a Context.
     // This method will create a notification for charging. It might be helpful
@@ -58,8 +59,9 @@ public class NotificationUtils {
         // COMPLETED (11) Get a NotificationManager, using context.getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationManager notificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        // TODO (12) Trigger the notification by calling notify on the NotificationManager.
+        // COMPLETED (12) Trigger the notification by calling notify on the NotificationManager.
         // Pass in a unique ID of your choosing for the notification and notificationBuilder.build()
+        notificationManager.notify(WATER_REMINDER_NOTIFICATION_ID, notificationBuilder.build());
     }
 
 
