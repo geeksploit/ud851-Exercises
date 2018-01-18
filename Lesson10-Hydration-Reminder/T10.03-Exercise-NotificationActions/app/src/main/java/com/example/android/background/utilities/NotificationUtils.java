@@ -92,7 +92,12 @@ public class NotificationUtils {
                 ignoreWaterReminderIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
-    //      TODO (9) Create an Action for the user to ignore the notification (and dismiss it)
+        // COMPLETED (9) Create an Action for the user to ignore the notification (and dismiss it)
+        NotificationCompat.Action ignoreWaterReminderAction = new NotificationCompat.Action(
+                R.drawable.ic_cancel_black_24px,
+                context.getString(R.string.notification_action_no_thanks),
+                ignoreWaterReminderPendingIntent
+        );
     //      TODO (10) Return the action
     }
 
