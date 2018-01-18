@@ -17,6 +17,7 @@ package com.example.android.background.sync;
 
 import android.content.Context;
 
+import com.example.android.background.utilities.NotificationUtils;
 import com.example.android.background.utilities.PreferenceUtilities;
 
 public class ReminderTasks {
@@ -26,10 +27,17 @@ public class ReminderTasks {
     public static final String ACTION_DISMISS_NOTIFICATION = "dismiss-water-notification";
 
     public static void executeTask(Context context, String action) {
-        if (ACTION_INCREMENT_WATER_COUNT.equals(action)) {
-            incrementWaterCount(context);
+        // COMPLETED (3) If the user ignored the reminder, clear the notification
+        switch (action) {
+            case ACTION_INCREMENT_WATER_COUNT:
+                incrementWaterCount(context);
+                break;
+            case ACTION_DISMISS_NOTIFICATION:
+                NotificationUtils.clearAllNotifications(context);
+                break;
+            default:
+                throw new UnsupportedOperationException("Unknown action: " + action);
         }
-        //      TODO (3) If the user ignored the reminder, clear the notification
     }
 
     private static void incrementWaterCount(Context context) {
