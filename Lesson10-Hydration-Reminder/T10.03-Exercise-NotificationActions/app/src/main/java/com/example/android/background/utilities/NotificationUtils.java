@@ -120,7 +120,7 @@ public class NotificationUtils {
         );
         // COMPLETED (15) Create an Action for the user to tell us they've had a glass of water
         NotificationCompat.Action launchWaterReminderAction = new NotificationCompat.Action(
-                R.drawable.ic_drink_notification,
+                R.drawable.ic_local_drink_black_24px,
                 context.getString(R.string.notification_action_i_did_it),
                 launchWaterReminderPendingIntent
         );
