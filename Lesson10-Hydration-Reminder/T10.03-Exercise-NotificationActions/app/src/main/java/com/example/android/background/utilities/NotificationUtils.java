@@ -47,6 +47,7 @@ public class NotificationUtils {
      * This pending intent id is used to uniquely reference the pending intent
      */
     private static final int WATER_REMINDER_PENDING_INTENT_ID = 3417;
+    private static final int WATER_REMINDER_IGNORE_PENDING_INTENT_ID = 3418;
 
     // COMPLETED (1) Create a method to clear all notifications
     public static void clearAllNotifications(Context context) {
@@ -90,7 +91,7 @@ public class NotificationUtils {
         // COMPLETED (8) Create a PendingIntent from the intent to launch WaterReminderIntentService
         PendingIntent ignoreWaterReminderPendingIntent = PendingIntent.getService(
                 context,
-                WATER_REMINDER_PENDING_INTENT_ID,
+                WATER_REMINDER_IGNORE_PENDING_INTENT_ID,
                 ignoreWaterReminderIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
