@@ -115,7 +115,12 @@ public class NotificationUtils {
                 launchWaterReminderIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
-    //      TODO (15) Create an Action for the user to tell us they've had a glass of water
+        // COMPLETED (15) Create an Action for the user to tell us they've had a glass of water
+        NotificationCompat.Action launchWaterReminderAction = new NotificationCompat.Action(
+                R.drawable.ic_drink_notification,
+                context.getString(R.string.notification_action_i_did_it),
+                launchWaterReminderPendingIntent
+        );
     //      TODO (16) Return the action
     }
 
