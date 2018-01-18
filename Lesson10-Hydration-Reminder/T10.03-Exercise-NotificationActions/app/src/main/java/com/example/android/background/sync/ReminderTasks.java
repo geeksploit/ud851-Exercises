@@ -42,6 +42,7 @@ public class ReminderTasks {
 
     private static void incrementWaterCount(Context context) {
         PreferenceUtilities.incrementWaterCount(context);
-        //      TODO (4) If the water count was incremented, clear any notifications
+        // COMPLETED (4) If the water count was incremented, clear any notifications
+        NotificationUtils.clearAllNotifications(context);
     }
 }
