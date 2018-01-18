@@ -121,7 +121,8 @@ public class NotificationUtils {
                 context.getString(R.string.notification_action_i_did_it),
                 launchWaterReminderPendingIntent
         );
-    //      TODO (16) Return the action
+        // COMPLETED (16) Return the action
+        return launchWaterReminderAction;
     }
 
     private static PendingIntent contentIntent(Context context) {
