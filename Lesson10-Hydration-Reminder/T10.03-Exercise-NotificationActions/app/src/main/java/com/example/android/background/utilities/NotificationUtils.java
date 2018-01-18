@@ -98,7 +98,8 @@ public class NotificationUtils {
                 context.getString(R.string.notification_action_no_thanks),
                 ignoreWaterReminderPendingIntent
         );
-    //      TODO (10) Return the action
+        // COMPLETED (10) Return the action
+        return ignoreWaterReminderAction;
     }
 
     //  TODO (11) Add a static method called drinkWaterAction
