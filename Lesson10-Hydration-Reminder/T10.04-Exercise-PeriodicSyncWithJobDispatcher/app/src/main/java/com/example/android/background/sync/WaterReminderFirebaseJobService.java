@@ -31,10 +31,14 @@ public class WaterReminderFirebaseJobService extends JobService {
         // COMPLETED (5) By default, jobs are executed on the main thread, so make an anonymous class extending
         //  AsyncTask called mBackgroundTask.
         mBackgroundTask = new AsyncTask() {
-            // TODO (6) Override doInBackground
+            // COMPLETED (6) Override doInBackground
+            @Override
+            protected Object doInBackground(Object[] objects) {
                 // TODO (7) Use ReminderTasks to execute the new charging reminder task you made, use
                 // this service as the context (WaterReminderFirebaseJobService.this) and return null
                 // when finished.
+                return null;
+            }
             // TODO (8) Override onPostExecute and called jobFinished. Pass the job parameters
             // and false to jobFinished. This will inform the JobManager that your job is done
             // and that you do not want to reschedule the job.
