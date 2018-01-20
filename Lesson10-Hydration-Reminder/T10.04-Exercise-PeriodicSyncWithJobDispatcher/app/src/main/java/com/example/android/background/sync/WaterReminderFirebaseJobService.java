@@ -50,7 +50,7 @@ public class WaterReminderFirebaseJobService extends JobService {
             protected void onPostExecute(Object o) {
                 jobFinished(jobParameters, false);
             }
-        }
+        };
 
         // TODO (9) Execute the AsyncTask
         // TODO (10) Return true
