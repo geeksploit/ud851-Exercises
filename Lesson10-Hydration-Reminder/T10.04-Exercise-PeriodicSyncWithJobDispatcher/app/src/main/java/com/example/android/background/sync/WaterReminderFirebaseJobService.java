@@ -64,8 +64,8 @@ public class WaterReminderFirebaseJobService extends JobService {
     public boolean onStopJob(JobParameters job) {
         // COMPLETED (12) If mBackgroundTask is valid, cancel it
         if (mBackgroundTask != null) mBackgroundTask.cancel(true);
-        // TODO (13) Return true to signify the job should be retried
-        return false;
+        // COMPLETED (13) Return true to signify the job should be retried
+        return true;
     }
 
 }
