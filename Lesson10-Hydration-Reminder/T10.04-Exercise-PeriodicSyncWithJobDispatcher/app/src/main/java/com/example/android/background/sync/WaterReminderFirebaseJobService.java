@@ -15,6 +15,7 @@
  */
 package com.example.android.background.sync;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 import com.firebase.jobdispatcher.JobParameters;
@@ -34,9 +35,12 @@ public class WaterReminderFirebaseJobService extends JobService {
             // COMPLETED (6) Override doInBackground
             @Override
             protected Object doInBackground(Object[] objects) {
-                // TODO (7) Use ReminderTasks to execute the new charging reminder task you made, use
+                // COMPLETED (7) Use ReminderTasks to execute the new charging reminder task you made, use
                 // this service as the context (WaterReminderFirebaseJobService.this) and return null
                 // when finished.
+                Context context = WaterReminderFirebaseJobService.this;
+                String action = ReminderTasks.ACTION_ISSUE_REMINDER_NOTIFICATION;
+                ReminderTasks.executeTask(context, action);
                 return null;
             }
             // TODO (8) Override onPostExecute and called jobFinished. Pass the job parameters
