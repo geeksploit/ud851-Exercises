@@ -52,7 +52,9 @@ public class WaterReminderFirebaseJobService extends JobService {
             }
         };
 
-        // TODO (9) Execute the AsyncTask
+        // COMPLETED (9) Execute the AsyncTask
+        mBackgroundTask.execute();
+
         // TODO (10) Return true
         return false;
     }
