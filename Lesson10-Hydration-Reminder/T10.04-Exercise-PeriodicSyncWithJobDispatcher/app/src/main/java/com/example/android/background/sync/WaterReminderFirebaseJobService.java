@@ -15,17 +15,22 @@
  */
 package com.example.android.background.sync;
 
+import android.os.AsyncTask;
+
 import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
 
 // COMPLETED (3) WaterReminderFirebaseJobService should extend from JobService
 public class WaterReminderFirebaseJobService extends JobService {
 
+    private AsyncTask mBackgroundTask;
+
     // COMPLETED (4) Override onStartJob
     @Override
     public boolean onStartJob(JobParameters job) {
-        // TODO (5) By default, jobs are executed on the main thread, so make an anonymous class extending
+        // COMPLETED (5) By default, jobs are executed on the main thread, so make an anonymous class extending
         //  AsyncTask called mBackgroundTask.
+        mBackgroundTask = new AsyncTask() {
             // TODO (6) Override doInBackground
                 // TODO (7) Use ReminderTasks to execute the new charging reminder task you made, use
                 // this service as the context (WaterReminderFirebaseJobService.this) and return null
@@ -33,6 +38,7 @@ public class WaterReminderFirebaseJobService extends JobService {
             // TODO (8) Override onPostExecute and called jobFinished. Pass the job parameters
             // and false to jobFinished. This will inform the JobManager that your job is done
             // and that you do not want to reschedule the job.
+        }
 
         // TODO (9) Execute the AsyncTask
         // TODO (10) Return true
