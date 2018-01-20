@@ -55,8 +55,8 @@ public class WaterReminderFirebaseJobService extends JobService {
         // COMPLETED (9) Execute the AsyncTask
         mBackgroundTask.execute();
 
-        // TODO (10) Return true
-        return false;
+        // COMPLETED (10) Return true
+        return true;
     }
 
     // TODO (11) Override onStopJob
