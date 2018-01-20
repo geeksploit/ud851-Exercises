@@ -28,7 +28,7 @@ public class WaterReminderFirebaseJobService extends JobService {
 
     // COMPLETED (4) Override onStartJob
     @Override
-    public boolean onStartJob(JobParameters job) {
+    public boolean onStartJob(final JobParameters jobParameters) {
         // COMPLETED (5) By default, jobs are executed on the main thread, so make an anonymous class extending
         //  AsyncTask called mBackgroundTask.
         mBackgroundTask = new AsyncTask() {
@@ -43,9 +43,13 @@ public class WaterReminderFirebaseJobService extends JobService {
                 ReminderTasks.executeTask(context, action);
                 return null;
             }
-            // TODO (8) Override onPostExecute and called jobFinished. Pass the job parameters
+            // COMPLETED (8) Override onPostExecute and called jobFinished. Pass the job parameters
             // and false to jobFinished. This will inform the JobManager that your job is done
             // and that you do not want to reschedule the job.
+            @Override
+            protected void onPostExecute(Object o) {
+                jobFinished(jobParameters, false);
+            }
         }
 
         // TODO (9) Execute the AsyncTask
