@@ -83,6 +83,7 @@ public class ReminderUtilities {
         // COMPLETED (21) Use dispatcher's schedule method to schedule the job
         firebaseJobDispatcher.schedule(waterReminderJob);
 
-        // TODO (22) Set sInitialized to true to mark that we're done setting up the job
+        // COMPLETED (22) Set sInitialized to true to mark that we're done setting up the job
+        sInitialized = true;
     }
 }
