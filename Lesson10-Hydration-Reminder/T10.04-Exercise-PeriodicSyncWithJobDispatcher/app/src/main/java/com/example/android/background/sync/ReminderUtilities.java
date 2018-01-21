@@ -18,9 +18,13 @@ package com.example.android.background.sync;
 
 import android.content.Context;
 
+import com.firebase.jobdispatcher.Constraint;
 import com.firebase.jobdispatcher.Driver;
 import com.firebase.jobdispatcher.FirebaseJobDispatcher;
 import com.firebase.jobdispatcher.GooglePlayDriver;
+import com.firebase.jobdispatcher.Job;
+import com.firebase.jobdispatcher.Lifetime;
+import com.firebase.jobdispatcher.Trigger;
 
 import java.util.concurrent.TimeUnit;
 
@@ -54,7 +58,7 @@ public class ReminderUtilities {
         // COMPLETED (19) Create a new FirebaseJobDispatcher with the driver
         FirebaseJobDispatcher firebaseJobDispatcher = new FirebaseJobDispatcher(driver);
 
-        // TODO (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
+        // COMPLETED (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
             // - has WaterReminderFirebaseJobService as it's service
             // - has the tag REMINDER_JOB_TAG
             // - only triggers if the device is charging
@@ -64,6 +68,18 @@ public class ReminderUtilities {
             //   setTrigger, passing in a Trigger.executionWindow
             // - replaces the current job if it's already running
         // Finally, you should build the job.
+        Job waterReminderJob = firebaseJobDispatcher.newJobBuilder()
+                .setService(WaterReminderFirebaseJobService.class)
+                .setTag(REMINDER_JOB_TAG)
+                .setConstraints(Constraint.DEVICE_CHARGING)
+                .setLifetime(Lifetime.FOREVER)
+                .setRecurring(true)
+                .setTrigger(Trigger.executionWindow(
+                        REMINDER_INTERVAL_SECONDS,
+                        REMINDER_INTERVAL_SECONDS + SYNC_FLEXTIME_SECONDS))
+                .setReplaceCurrent(true)
+                .build();
+
         // TODO (21) Use dispatcher's schedule method to schedule the job
         // TODO (22) Set sInitialized to true to mark that we're done setting up the job
     }
