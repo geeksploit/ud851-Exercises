@@ -42,7 +42,9 @@ public class ReminderUtilities {
     // every REMINDER_INTERVAL_SECONDS when the phone is charging. It will trigger WaterReminderFirebaseJobService
     // Checkout https://github.com/firebase/firebase-jobdispatcher-android for an example
     synchronized public static void scheduleChargingReminder(Context context) {
-        // TODO (17) If the job has already been initialized, return
+        // COMPLETED (17) If the job has already been initialized, return
+        if (sInitialized) return;
+
         // TODO (18) Create a new GooglePlayDriver
         // TODO (19) Create a new FirebaseJobDispatcher with the driver
         // TODO (20) Use FirebaseJobDispatcher's newJobBuilder method to build a job which:
