@@ -84,7 +84,12 @@ public class MainActivity extends AppCompatActivity implements
         registerReceiver(mChargingBroadcastReceiver, mChargingIntentFilter);
     }
 
-    // TODO (8) Override onPause and unregister your receiver using the unregisterReceiver method
+    // COMPLETED (8) Override onPause and unregister your receiver using the unregisterReceiver method
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(mChargingBroadcastReceiver);
+    }
 
     /**
      * Updates the TextView to display the new water count from SharedPreferences
