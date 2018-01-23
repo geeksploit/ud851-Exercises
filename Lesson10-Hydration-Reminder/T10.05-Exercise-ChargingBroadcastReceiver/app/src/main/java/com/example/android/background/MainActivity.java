@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements
     private ImageView mChargingImageView;
 
     private IntentFilter mChargingIntentFilter;
+    private ChargingBroadcastReceiver mChargingBroadcastReceiver;
 
     private Toast mToast;
 
@@ -74,11 +75,17 @@ public class MainActivity extends AppCompatActivity implements
         mChargingIntentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
     }
 
-    // TODO (7) Override onResume and setup your broadcast receiver. Do this by calling
+    // COMPLETED (7) Override onResume and setup your broadcast receiver. Do this by calling
     // registerReceiver with the ChargingBroadcastReceiver and IntentFilter.
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mChargingBroadcastReceiver = new ChargingBroadcastReceiver();
+        registerReceiver(mChargingBroadcastReceiver, mChargingIntentFilter);
+    }
 
     // TODO (8) Override onPause and unregister your receiver using the unregisterReceiver method
-    
+
     /**
      * Updates the TextView to display the new water count from SharedPreferences
      */
