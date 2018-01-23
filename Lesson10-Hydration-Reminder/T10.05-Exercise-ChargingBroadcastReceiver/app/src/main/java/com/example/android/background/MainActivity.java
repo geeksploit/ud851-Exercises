@@ -89,10 +89,14 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    // TODO (1) Create a new method called showCharging which takes a boolean. This method should
+    // COMPLETED (1) Create a new method called showCharging which takes a boolean. This method should
     // either change the image of mChargingImageView to ic_power_pink_80px if the boolean is true
     // or R.drawable.ic_power_grey_80px it it's not. This method will eventually update the UI
     // when our broadcast receiver is triggered when the charging state changes.
+    private void showCharging(boolean isCharging) {
+        int resource = isCharging ? R.drawable.ic_power_pink_80px : R.drawable.ic_power_grey_80px;
+        mChargingImageView.setImageResource(resource);
+    }
 
     /**
      * Adds one to the water count and shows a toast
