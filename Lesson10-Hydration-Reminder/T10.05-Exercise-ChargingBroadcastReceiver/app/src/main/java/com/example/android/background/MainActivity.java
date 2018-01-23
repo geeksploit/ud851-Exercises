@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements
         // COMPLETED (5) Create and instantiate a new instance variable for your ChargingBroadcastReceiver
         // and an IntentFilter
         mChargingIntentFilter = new IntentFilter();
+        mChargingBroadcastReceiver = new ChargingBroadcastReceiver();
 
         // COMPLETED (6) Call the addAction method on your intent filter and add Intent.ACTION_POWER_CONNECTED
         // and Intent.ACTION_POWER_DISCONNECTED. This sets up an intent filter which will trigger
@@ -80,7 +81,6 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        mChargingBroadcastReceiver = new ChargingBroadcastReceiver();
         registerReceiver(mChargingBroadcastReceiver, mChargingIntentFilter);
     }
 
