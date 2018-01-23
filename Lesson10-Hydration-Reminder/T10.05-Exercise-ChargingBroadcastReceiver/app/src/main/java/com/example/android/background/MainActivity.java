@@ -143,7 +143,8 @@ public class MainActivity extends AppCompatActivity implements
         @Override
         public void onReceive(Context context, Intent intent) {
             boolean isCharging = Intent.ACTION_POWER_CONNECTED.equals(intent.getAction());
-            // TODO (4) Update the UI using the showCharging method you wrote
+            // COMPLETED (4) Update the UI using the showCharging method you wrote
+            showCharging(isCharging);
         }
 
     }
