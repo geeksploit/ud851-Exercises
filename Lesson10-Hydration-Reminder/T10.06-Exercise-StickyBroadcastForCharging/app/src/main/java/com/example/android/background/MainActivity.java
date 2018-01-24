@@ -115,7 +115,8 @@ public class MainActivity extends AppCompatActivity implements
                     chargingStatus == BatteryManager.BATTERY_STATUS_CHARGING
                     || chargingStatus == BatteryManager.BATTERY_STATUS_FULL;
 
-            // TODO (8) Update the UI using your showCharging method
+            // COMPLETED (8) Update the UI using your showCharging method
+            showCharging(isCharging);
         }
 
         registerReceiver(mChargingReceiver, mChargingIntentFilter);
