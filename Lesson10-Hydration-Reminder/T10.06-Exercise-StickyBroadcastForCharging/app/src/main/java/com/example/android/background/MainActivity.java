@@ -89,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // COMPLETED (2) Get a BatteryManager instance using getSystemService()
             BatteryManager batteryManager = (BatteryManager) getSystemService(BATTERY_SERVICE);
-            // TODO (3) Call isCharging on the battery manager and pass the result on to your show
+            // COMPLETED (3) Call isCharging on the battery manager and pass the result on to your show
             // charging method
+            showCharging(batteryManager.isCharging());
         }
 
         // TODO (4) If your user is not on M+, then...
