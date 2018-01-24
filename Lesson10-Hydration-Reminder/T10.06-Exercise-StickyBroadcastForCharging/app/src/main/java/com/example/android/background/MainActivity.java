@@ -35,6 +35,8 @@ import com.example.android.background.sync.ReminderUtilities;
 import com.example.android.background.sync.WaterReminderIntentService;
 import com.example.android.background.utilities.PreferenceUtilities;
 
+import static android.content.Intent.ACTION_BATTERY_CHANGED;
+
 public class MainActivity extends AppCompatActivity implements
         SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -96,8 +98,9 @@ public class MainActivity extends AppCompatActivity implements
 
         // COMPLETED (4) If your user is not on M+, then...
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            // TODO (5) Create a new intent filter with the action ACTION_BATTERY_CHANGED. This is a
+            // COMPLETED (5) Create a new intent filter with the action ACTION_BATTERY_CHANGED. This is a
             // sticky broadcast that contains a lot of information about the battery state.
+            IntentFilter chargingIntentFilter = new IntentFilter(ACTION_BATTERY_CHANGED);
             // TODO (6) Set a new Intent object equal to what is returned by registerReceiver, passing in null
             // for the receiver. Pass in your intent filter as well. Passing in null means that you're
             // getting the current state of a sticky broadcast - the intent returned will contain the
