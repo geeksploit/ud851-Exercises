@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -86,7 +87,8 @@ public class MainActivity extends AppCompatActivity implements
 
         // COMPLETED (1) Check if you are on Android M or later, if so...
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            // TODO (2) Get a BatteryManager instance using getSystemService()
+            // COMPLETED (2) Get a BatteryManager instance using getSystemService()
+            BatteryManager batteryManager = (BatteryManager) getSystemService(BATTERY_SERVICE);
             // TODO (3) Call isCharging on the battery manager and pass the result on to your show
             // charging method
         }
