@@ -101,10 +101,11 @@ public class MainActivity extends AppCompatActivity implements
             // COMPLETED (5) Create a new intent filter with the action ACTION_BATTERY_CHANGED. This is a
             // sticky broadcast that contains a lot of information about the battery state.
             IntentFilter chargingIntentFilter = new IntentFilter(ACTION_BATTERY_CHANGED);
-            // TODO (6) Set a new Intent object equal to what is returned by registerReceiver, passing in null
+            // COMPLETED (6) Set a new Intent object equal to what is returned by registerReceiver, passing in null
             // for the receiver. Pass in your intent filter as well. Passing in null means that you're
             // getting the current state of a sticky broadcast - the intent returned will contain the
             // battery information you need.
+            Intent chargingIntent = registerReceiver(null, chargingIntentFilter);
             // TODO (7) Get the integer extra BatteryManager.EXTRA_STATUS. Check if it matches
             // BatteryManager.BATTERY_STATUS_CHARGING or BatteryManager.BATTERY_STATUS_FULL. This means
             // the battery is currently charging.
