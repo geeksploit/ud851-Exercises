@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity implements
             showCharging(batteryManager.isCharging());
         }
 
-        // TODO (4) If your user is not on M+, then...
+        // COMPLETED (4) If your user is not on M+, then...
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             // TODO (5) Create a new intent filter with the action ACTION_BATTERY_CHANGED. This is a
             // sticky broadcast that contains a lot of information about the battery state.
             // TODO (6) Set a new Intent object equal to what is returned by registerReceiver, passing in null
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements
             // BatteryManager.BATTERY_STATUS_CHARGING or BatteryManager.BATTERY_STATUS_FULL. This means
             // the battery is currently charging.
             // TODO (8) Update the UI using your showCharging method
+        }
 
         registerReceiver(mChargingReceiver, mChargingIntentFilter);
     }
