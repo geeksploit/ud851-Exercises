@@ -106,9 +106,15 @@ public class MainActivity extends AppCompatActivity implements
             // getting the current state of a sticky broadcast - the intent returned will contain the
             // battery information you need.
             Intent chargingIntent = registerReceiver(null, chargingIntentFilter);
-            // TODO (7) Get the integer extra BatteryManager.EXTRA_STATUS. Check if it matches
+            // COMPLETED (7) Get the integer extra BatteryManager.EXTRA_STATUS. Check if it matches
             // BatteryManager.BATTERY_STATUS_CHARGING or BatteryManager.BATTERY_STATUS_FULL. This means
             // the battery is currently charging.
+            int chargingStatus = chargingIntent.getIntExtra(BatteryManager.EXTRA_STATUS,
+                    BatteryManager.BATTERY_STATUS_UNKNOWN);
+            boolean isCharging =
+                    chargingStatus == BatteryManager.BATTERY_STATUS_CHARGING
+                    || chargingStatus == BatteryManager.BATTERY_STATUS_FULL;
+
             // TODO (8) Update the UI using your showCharging method
         }
 
