@@ -4,6 +4,8 @@
     <dimen name="activity_horizontal_margin_double">32dp</dimen>
     <dimen name="activity_vertical_margin_half">8dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin_triple">48dp</dimen>
     <dimen name="image_rectangle_width">60dp</dimen>
     <dimen name="image_rectangle_height">80dp</dimen>
+    <dimen name="letter_spacing_half">0.3</dimen>
 </resources>
