@@ -38,7 +38,7 @@
         tools:text="@string/passenger_name" />
 
     <!-- COMPLETED (5) Create an ImageView for the left rectangle -->
-    <!-- TODO (6) Set the background to the shape_rectangle_stroke drawable -->
+    <!-- COMPLETED (6) Set the background to the shape_rectangle_stroke drawable -->
     <ImageView
         android:id="@+id/leftRectangle"
         android:layout_width="@dimen/image_rectangle_width"
@@ -46,6 +46,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin_double"
         android:layout_marginStart="@dimen/activity_horizontal_margin_double"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/shape_rectangle_stroke"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewPassengerName" />
 
