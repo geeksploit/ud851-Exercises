@@ -217,7 +217,76 @@
 
     <!-- TODO (12) Create an ImageView for the blue table's body -->
 
-    <!-- TODO (13) Create a TextView for each of the labels and text fields in the blue table -->
+    <!-- COMPLETED (13) Create a TextView for each of the labels and text fields in the blue table -->
+    <TextView
+        android:id="@+id/textViewTerminalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terminal_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tableHeaderImage"
+        app:layout_constraintLeft_toLeftOf="@id/textViewTerminal"
+        app:layout_constraintRight_toRightOf="@id/textViewTerminal"
+        app:layout_constraintTop_toTopOf="@id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewTerminal"
+        android:layout_width="@dimen/table_text_width"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@id/tableHeaderImage"
+        app:layout_constraintTop_toBottomOf="@id/tableHeaderImage"
+        tools:text="@string/terminal" />
+
+    <TextView
+        android:id="@+id/textViewGateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gate_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tableHeaderImage"
+        app:layout_constraintLeft_toLeftOf="@id/tableHeaderImage"
+        app:layout_constraintRight_toRightOf="@id/tableHeaderImage"
+        app:layout_constraintTop_toTopOf="@id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewGate"
+        android:layout_width="@dimen/table_text_width"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@id/textViewGateLabel"
+        app:layout_constraintRight_toRightOf="@id/textViewGateLabel"
+        app:layout_constraintTop_toBottomOf="@id/tableHeaderImage"
+        tools:text="@string/gate" />
+
+    <TextView
+        android:id="@+id/textViewSeatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seat_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tableHeaderImage"
+        app:layout_constraintLeft_toLeftOf="@id/textViewSeat"
+        app:layout_constraintRight_toRightOf="@id/textViewSeat"
+        app:layout_constraintTop_toTopOf="@id/tableHeaderImage" />
+
+    <TextView
+        android:id="@+id/textViewSeat"
+        android:layout_width="@dimen/table_text_width"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        app:layout_constraintRight_toRightOf="@id/tableHeaderImage"
+        app:layout_constraintTop_toBottomOf="@id/tableHeaderImage"
+        tools:text="@string/terminal" />
 
     <!-- TODO (14) Create an ImageView for the barcode -->
 
