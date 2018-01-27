@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@id/divider"
         tools:text="@string/flight_code" />
 
-    <!-- TODO (15) Import the plane image SVG file into the drawable directory and name it art_plane -->
+    <!-- COMPLETED (15) Import the plane image SVG file into the drawable directory and name it art_plane -->
     <!-- TODO (16) Create an ImageView for the plane and set the background to art_plane drawable -->
 
     <!-- COMPLETED (10) Create a TextView for the time texts and their corresponding labels -->
