@@ -110,7 +110,16 @@
         tools:text="@string/flight_code" />
 
     <!-- COMPLETED (15) Import the plane image SVG file into the drawable directory and name it art_plane -->
-    <!-- TODO (16) Create an ImageView for the plane and set the background to art_plane drawable -->
+    <!-- COMPLETED (16) Create an ImageView for the plane and set the background to art_plane drawable -->
+    <ImageView
+        android:id="@+id/imagePlane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@drawable/art_plane"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintLeft_toRightOf="@id/leftRectangle"
+        app:layout_constraintRight_toLeftOf="@id/rightRectangle" />
 
     <!-- COMPLETED (10) Create a TextView for the time texts and their corresponding labels -->
     <TextView
