@@ -159,8 +159,21 @@
 
 <!--
     COMPLETED (4) Move all Views in the boarding information table from activity_main to boarding_info
-    TODO (6) Add an include tag in activity_main to include boardingInfo in the right position
+    COMPLETED (6) Add an include tag in activity_main to include boardingInfo in the right position
 -->
+        <include
+            android:id="@+id/boardingInfo"
+            layout="@layout/boarding_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewArrivalTime" />
 
         <ImageView
             android:layout_width="100dp"
