@@ -82,4 +82,3 @@ public class MainActivity extends AppCompatActivity {
         mBinding.textViewSeat.setText(info.seatNumber);
     }
 }
-
