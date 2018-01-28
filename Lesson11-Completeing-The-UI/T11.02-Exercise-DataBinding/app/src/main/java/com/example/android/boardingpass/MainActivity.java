@@ -16,6 +16,7 @@ package com.example.android.boardingpass;
 * limitations under the License.
 */
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -31,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        // TODO (4) Set the Content View using DataBindingUtil to the activity_main layout
+        // COMPLETED (4) Set the Content View using DataBindingUtil to the activity_main layout
+        DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         // TODO (5) Load a BoardingPassInfo object with fake data using FakeDataUtils
 
