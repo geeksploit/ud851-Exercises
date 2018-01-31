@@ -35,7 +35,9 @@
         <item name="android:textSize">28dp</item>
     </style>
 
-    <!-- TODO (4) Create a new "inboxStyle" that inherits from "folderStyle" and includes a bold textStyle property -->
-
+    <!-- COMPLETED (4) Create a new "inboxStyle" that inherits from "folderStyle" and includes a bold textStyle property -->
+    <style name="inboxStyle" parent="folderStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>
