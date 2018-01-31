@@ -34,34 +34,42 @@
         android:paddingRight="8dp"
         android:contentDescription="@string/image_placeholder" />
 
-    <!-- TODO (4) Wrap the text in a vertical linear layout and add more padding (8dp) to the left and right of all text -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sample_title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:paddingBottom="4dp"/>
-
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sample_date"
-        android:textSize="20sp"
-        android:textColor="@android:color/darker_gray"
-        android:paddingBottom="8dp"/>
-
-
-    <TextView
-        android:id="@+id/body_text"
+    <!-- COMPLETED (4) Wrap the text in a vertical linear layout and add more padding (8dp) to the left and right of all text -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:text="@string/sample_body_text"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_date"
+            android:textSize="20sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/body_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/sample_body_text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
