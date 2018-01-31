@@ -6,7 +6,7 @@
 
 <!-- COMPLETED (2) Copy over the responsive_layout xml from the base layout folder -->
 
-<!-- TODO (3) Using a horizontal linear layout, change this xml so that the ImageView appears to the left of all text -->
+<!-- COMPLETED (3) Using a horizontal linear layout, change this xml so that the ImageView appears to the left of all text -->
 <!-- The image layout height should be = 200dp and weight = 1, add 8dp padding to the right -->
 
 <!-- Vertical linear layout for a sample article -->
@@ -19,18 +19,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.android.visualpolish.ResponsiveLayoutActivity">
 
     <!-- The layout includes views for a placeholder image, article title, date, and body text -->
     <ImageView
         android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
-        android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingBottom="8dp"
         android:src="@drawable/ic_insert_image"
         android:gravity="center"
+        android:paddingRight="8dp"
         android:contentDescription="@string/image_placeholder" />
 
     <!-- TODO (4) Wrap the text in a vertical linear layout and add more padding (8dp) to the left and right of all text -->
